@@ -40,10 +40,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Brightness: 0.161
-    - _Devisor: 0.711
+    - _Brightness: 0.58
+    - _Devisor: 0.093
     - _NormalIntesity: 1
-    - _Power: 0.261
+    - _Power: 1
     - _Scale: 0.0855
     m_Colors:
-    - _Color: {r: 0.9056604, g: 0.8343552, b: 0.012815925, a: 1}
+    - _Color: {r: 0.6320754, g: 0.2773578, b: 0, a: 1}
