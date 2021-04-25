@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected IConsumable consumableAction;
 
     [SerializeField] private GameObject prefabForConsume;
+
+    public delegate void EnemyLifeCycle();
+    public event EnemyLifeCycle EnemyDied;
 
 
     void Awake()
@@ -42,4 +46,19 @@ public class Enemy : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        Enemy temp = other.gameObject.GetComponent<Enemy>();
+
+
+        if (temp == null) return;
+        
+        this.EnemyDied?.Invoke();
+        Destroy(this.gameObject);
+
+        
+    }
+    
+    
+    
 }

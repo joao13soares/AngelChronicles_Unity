@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NormalThrow : IThrowable
 {
-    public void ThrowAction(GameObject objectToThrow, Vector3 velocity)
+    public virtual void  ThrowAction(GameObject objectToThrow, Vector3 velocity)
     {
        
         objectToThrow.transform.parent = null;

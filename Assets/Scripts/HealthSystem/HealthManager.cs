@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    
-
     [SerializeField] Vector3 levelStartPostion;
     Vector3 lastCheckPointPosition;
 
@@ -14,33 +12,61 @@ public class HealthManager : MonoBehaviour
     float lives, hitsRemaining;
     [SerializeField] float currentFeathers;
 
+    private bool playerInvincible;
+    [SerializeField] private const float invincibilityFramesTime = 1.5f;
+
+    
+    //TESTES
+    private Vector3 level1Start = new Vector3(-51, 4, 30);
 
     // Start is called before the first frame update
     void Awake()
     {
-        lastCheckPointPosition = levelStartPostion;
+        //lastCheckPointPosition = levelStartPostion;
+        lastCheckPointPosition = level1Start;
         lives = 3;
         hitsRemaining = 3;
+        playerInvincible = false;
     }
 
     public void ChangeLastCheckpoint(Vector3 newCheckpointPos) => lastCheckPointPosition = newCheckpointPos;
 
     public void GetHit()
     {
+        if (playerInvincible) return;
+
         if (hitsRemaining > 0)
         {
             hitsRemaining--;
+            StartCoroutine(InvincibilityFrames());
             return;
         }
 
-        else if (lives > 0)
+        if (lives > 0)
         {
             Respawn();
             return;
         }
 
-        else Restart();
+        Restart();
+    }
 
+    IEnumerator InvincibilityFrames()
+    {
+
+        Renderer temp = this.GetComponent<Renderer>();
+        
+        playerInvincible = true;
+        
+        temp.enabled = false;
+        
+        yield return new WaitForSeconds(invincibilityFramesTime);
+        
+        temp.enabled = true;
+        
+        playerInvincible = false;
+        
+        
     }
 
     private void SpawnPlayerAtPosition(Vector3 positionToSpawn) => this.transform.position = positionToSpawn;
@@ -49,6 +75,7 @@ public class HealthManager : MonoBehaviour
     {
         SpawnPlayerAtPosition(lastCheckPointPosition);
         lives--;
+        hitsRemaining = 3;
     }
 
     private void Restart()
@@ -67,10 +94,7 @@ public class HealthManager : MonoBehaviour
 
         lives++;
         currentFeathers = 0;
-
-
     }
 
     public void HaloCollected() => lives++;
-
 }

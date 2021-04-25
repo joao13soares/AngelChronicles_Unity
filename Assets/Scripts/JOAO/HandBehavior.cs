@@ -338,7 +338,6 @@ public class HandBehavior : MonoBehaviour
 
          if (temp != null && temp.canBeGrabbed)
          {
-             Debug.Log("APANHA CARALHO");
              temp.GrabAction( 0.5f, this.transform, this.transform.rotation, this.transform.position);
              grabbedObj = temp;
 

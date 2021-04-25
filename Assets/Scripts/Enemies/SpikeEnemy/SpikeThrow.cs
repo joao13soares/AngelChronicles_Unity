@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeThrow : MonoBehaviour,IThrowable
+public class SpikeThrow : NormalThrow
 {
-    public void ThrowAction(GameObject objectToThrow,Vector3 velocity)
+    public override void ThrowAction(GameObject objectToThrow,Vector3 velocity)
     {
+        base.ThrowAction(objectToThrow,velocity);
+        objectToThrow.GetComponent<SpikeCreation>().enabled = true;
 
     }
 }
