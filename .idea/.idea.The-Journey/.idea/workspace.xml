@@ -36,9 +36,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -94,6 +95,7 @@
       <workItem from="1619286962756" duration="63000" />
       <workItem from="1619287139542" duration="1149000" />
       <workItem from="1619290849616" duration="4658000" />
+      <workItem from="1620050153528" duration="6026000" />
     </task>
     <servers />
   </component>
