@@ -40,6 +40,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shader/Outliner.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -96,6 +97,7 @@
       <workItem from="1619287139542" duration="1149000" />
       <workItem from="1619290849616" duration="4658000" />
       <workItem from="1620050153528" duration="6026000" />
+      <workItem from="1620482579508" duration="5692000" />
     </task>
     <servers />
   </component>
