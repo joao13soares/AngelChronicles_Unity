@@ -329,14 +329,14 @@ public class HandBehavior : MonoBehaviour
 
    
     
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
      {
          Debug.Log(other.gameObject.name);
 
 
          Enemy temp = other.GetComponent<Enemy>();
 
-         if (temp != null && temp.canBeGrabbed)
+         if (temp != null && temp.canBeGrabbed && handState != HandStates.OnBody)
          {
              temp.GrabAction( 0.5f, this.transform, this.transform.rotation, this.transform.position);
              grabbedObj = temp;
