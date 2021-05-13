@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         consumableAction.ConsumeAction(playerTransform, this.prefabForConsume);
         Destroy(this.gameObject);
+        this.EnemyDied?.Invoke();
     }
 
     public void GrabAction(float scalingFactor, Transform handTransform, Quaternion handRotation, Vector3 handPosition)

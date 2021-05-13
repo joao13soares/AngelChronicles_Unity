@@ -9,11 +9,15 @@ public class HelicopterMechanic : MonoBehaviour
     [SerializeField] float maxFlyingTime;
     float currentFlyingTime = 0;
 
+
+    private Vector3 HeliHatOffset = Vector3.up + new Vector3(0.1f, 0.5f, -0.2f);
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        this.transform.localPosition += player.transform.lossyScale.y * 1.25f * player.transform.up;
+        this.transform.localScale /=   player.transform.lossyScale.x ;
+        this.transform.localPosition = HeliHatOffset/player.transform.lossyScale.x;
         player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionY;
     }
 
