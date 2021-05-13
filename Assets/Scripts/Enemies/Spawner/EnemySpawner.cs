@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+
+    
     [SerializeField]private GameObject enemyToSpawnPrefab;
     private GameObject currentEnemyAlive;
 
