@@ -33,6 +33,7 @@
               <e p="DoubleJumpConsumable.cs" t="Include" />
             </e>
             <e p="Enemy.cs" t="Include" />
+            <e p="EnemyMovement.cs" t="Include" />
             <e p="HelicopterEnemy" t="Include">
               <e p="HelicopterEnemy.cs" t="Include" />
             </e>
@@ -79,6 +80,7 @@
           </e>
         </e>
         <e p="Shader" t="Include">
+          <e p="Outliner.shader" t="Include" />
           <e p="Shell Shading.shader" t="Include" />
         </e>
       </e>

@@ -73,6 +73,7 @@ public class CannonEnemy : MonoBehaviour
             {
                 Debug.Log("DISPARA CARALHO");
                 cannonBall = Instantiate(cannonBallPrefab, cannonBallExitPoint.position, cannonBallExitPoint.rotation, null);
+                cannonBall.GetComponent<CannonBall>().GetPrediction(targetPosPredict + Vector3.up * 0.1f);
                 cannonBall.GetComponent<Rigidbody>().velocity = shootingVelocityVec;
 
                 timeForNextShoot = shootingCooldown;

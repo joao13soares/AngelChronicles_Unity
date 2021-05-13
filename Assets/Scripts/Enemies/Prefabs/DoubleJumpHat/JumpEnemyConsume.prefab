@@ -107,4 +107,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounciness: 8
-  maxBounceTime: 5
+  maxBounceTime: 1000

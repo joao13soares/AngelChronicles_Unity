@@ -41,26 +41,26 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void MovementInput()
-    {
-        float x = Input.GetAxis("Horizontal") * movementForce;
-        float z = Input.GetAxis("Vertical") * movementForce;
-
-        float cameraAngleWithWorld = mainCamera.transform.eulerAngles.y;
-
-        // movement
-        playerRb.velocity = Quaternion.AngleAxis(cameraAngleWithWorld, Vector3.up) * new Vector3(x, playerRb.velocity.y, z);
-
-        if (x == 0f && z == 0f) return;
-
-        // angle to face towards
-        float angleToTurn = Mathf.Atan2(x, z) * Mathf.Rad2Deg + cameraAngleWithWorld;
-        float smoothTurnVel = 2f;
-        float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, angleToTurn, ref smoothTurnVel, 0.05f);
-        this.transform.eulerAngles = new Vector3(0f, smoothAngle, 0f);
-        
-    }
-    
+    // private void MovementInput()
+    // {
+    //     float x = Input.GetAxis("Horizontal") * movementForce;
+    //     float z = Input.GetAxis("Vertical") * movementForce;
+    //
+    //     float cameraAngleWithWorld = mainCamera.transform.eulerAngles.y;
+    //
+    //     // movement
+    //     playerRb.velocity = Quaternion.AngleAxis(cameraAngleWithWorld, Vector3.up) * new Vector3(x, playerRb.velocity.y, z);
+    //
+    //     if (x == 0f && z == 0f) return;
+    //
+    //     // angle to face towards
+    //     float angleToTurn = Mathf.Atan2(x, z) * Mathf.Rad2Deg + cameraAngleWithWorld;
+    //     float smoothTurnVel = 2f;
+    //     float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, angleToTurn, ref smoothTurnVel, 0.05f);
+    //     this.transform.eulerAngles = new Vector3(0f, smoothAngle, 0f);
+    //     
+    // }
+    //
     private void JumpInput()
     {
         bool jumpKeyPressed = Input.GetKeyDown(KeyCode.Space);
@@ -99,5 +99,26 @@ public class PlayerMovement : MonoBehaviour
             //canDoubleJump = true;
         }
             
+    }
+    
+    
+    void MovementInput()
+    {
+        Vector3 horMov = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (horMov.magnitude > 1) horMov.Normalize();
+        horMov *= movementForce;
+
+        float cameraAngleWithWorld = mainCamera.transform.eulerAngles.y;
+
+        // movement
+        playerRb.velocity = Quaternion.AngleAxis(cameraAngleWithWorld, Vector3.up) * (playerRb.velocity.y * Vector3.up + horMov);
+
+        if (horMov.magnitude == 0) return;
+
+        // angle to face towards
+        float angleToTurn = Mathf.Atan2(horMov.x, horMov.z) * Mathf.Rad2Deg + cameraAngleWithWorld;
+        float smoothTurnVel = 2f;
+        float smoothAngle = Mathf.SmoothDampAngle(this.transform.eulerAngles.y, angleToTurn, ref smoothTurnVel, 0.05f);
+        this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, smoothAngle, this.transform.eulerAngles.z);
     }
 }

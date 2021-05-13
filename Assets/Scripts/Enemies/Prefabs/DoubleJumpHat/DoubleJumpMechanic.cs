@@ -12,9 +12,12 @@ public class DoubleJumpMechanic : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        //
+        // this.transform.localPosition -= player.transform.lossyScale.y * 1f * player.transform.up;
+         this.transform.localScale /=   player.transform.localScale.x ;
 
-        this.transform.localPosition -= player.transform.lossyScale.y * 1f * player.transform.up;
         player.GetComponent<Rigidbody>().AddForce(bounciness * this.transform.up, ForceMode.Impulse);
+        
     }
 
     void Update()
