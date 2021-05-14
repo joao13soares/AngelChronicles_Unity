@@ -34,13 +34,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -110,7 +110,8 @@
       <workItem from="1620927170957" duration="2893000" />
       <workItem from="1620930168677" duration="2992000" />
       <workItem from="1620942202821" duration="1384000" />
-      <workItem from="1620949476455" duration="1207000" />
+      <workItem from="1620949476455" duration="1888000" />
+      <workItem from="1620990062732" duration="1412000" />
     </task>
     <servers />
   </component>

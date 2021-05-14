@@ -343,6 +343,7 @@ public class HandBehavior : MonoBehaviour
 
          }
 
+         if(!other.CompareTag("Player"))
          handState = HandStates.Returning; // return hand regardless of what it collided with
      }
     
