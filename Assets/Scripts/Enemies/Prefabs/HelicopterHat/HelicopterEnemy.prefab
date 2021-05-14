@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyingVelocity: 2
-  maxFlyingTime: 5
+  maxFlyingTime: 15
 --- !u!1 &6412005447425238837
 GameObject:
   m_ObjectHideFlags: 0
