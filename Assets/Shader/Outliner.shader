@@ -5,20 +5,21 @@
         _MainTex ("Texture", 2D) = "black" {}
         _OutlineColor ("OutlineColor", Color) = (255,255,255,255)
         _OutlineWidth("OutlineWidth", Range(0,1)) = 0
+         [Enum(UnityEngine.Rendering.ZTest)] _ZTest ("ZTest", Float) = 0
     }
     SubShader
     {
         Tags
         {
-            "RenderType"="Opaque" 
-            "Queue" = "Geometry-100"
+            "RenderType"="Opaque"
+            "Queue"="Geometry+100"
         }
 
-        
+        ZTest Always
         ZWrite Off
 
         // front line
-        
+
         Pass
         {
 
@@ -50,10 +51,10 @@
                 v2f o;
 
 
-                 float3 worldNormal = mul(float4(v.normal,0),unity_WorldToObject);
-                
-                
-                o.vertex = UnityObjectToClipPos(v.vertex +  _OutlineWidth * v.normal);
+                float3 worldNormal = mul(float4(v.normal, 0), unity_WorldToObject);
+
+
+                o.vertex = UnityObjectToClipPos(v.vertex + _OutlineWidth * v.normal);
                 return o;
             }
 
@@ -67,11 +68,13 @@
             ENDCG
 
         }
+        
+        
+       
 
-      
-        
-        ZWrite On
-        
+        ZTest LEqual 
+        ZWrite Off
+
         Pass
         {
             CGPROGRAM
@@ -104,7 +107,6 @@
                 o.uv = v.uv;
                 return o;
             }
-
 
 
             fixed4 frag(v2f i) : SV_Target
