@@ -6553,6 +6553,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6659,6 +6660,19 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc54266ac4326541bf6345869816dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depthTextureMode: 0
 --- !u!1001 &963465680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7678,7 +7692,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5ac88e2340554f640850a11249245e47, type: 2}
+      objectReference: {fileID: 2100000, guid: a2c56ecbb7af2cc4dbb2ffd516f5ddf4, type: 2}
     - target: {fileID: 919132149155446097, guid: aefd5cb8ad6f94f4fadc55ad86d233ad,
         type: 3}
       propertyPath: m_Name
@@ -10118,9 +10132,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1974431384124317920, guid: ba8ebeb0858cb9f4494a235286dedbb7,
         type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e36238ed61843084bb1bfcd3218205a3, type: 2}
+    - target: {fileID: 1974431384124317920, guid: ba8ebeb0858cb9f4494a235286dedbb7,
+        type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: b275644500a347741b6a2d0d580e775c, type: 2}
+      objectReference: {fileID: 2100000, guid: e36238ed61843084bb1bfcd3218205a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8ebeb0858cb9f4494a235286dedbb7, type: 3}
 --- !u!1 &1472697153
