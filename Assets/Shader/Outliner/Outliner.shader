@@ -79,8 +79,8 @@
 
 
 
-				ZTest LEqual
-				ZWrite Off
+				ZTest Less
+				ZWrite On
 
 
 					Pass

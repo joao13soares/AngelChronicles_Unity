@@ -31,6 +31,8 @@ public class Enemy : MonoBehaviour
     public void ThrowAction(Vector3 velocity)
     {
         throwAction.ThrowAction(this.gameObject, velocity);
+        this.EnemyDied?.Invoke();
+
     }
 
     public void ConsumeAction(Transform playerTransform)

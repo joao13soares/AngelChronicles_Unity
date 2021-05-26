@@ -14,9 +14,14 @@ public class SpikeCreation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Wall"))
         {
+            this.transform.parent = null;
+            this.transform.localScale = new Vector3(1.3f, 0.3f, 1f);
+
             this.transform.parent = other.transform;
             this.GetComponent<Rigidbody>().isKinematic = true;
-            
+            this.tag = "Ground";
+
+
         }
     }
 }
