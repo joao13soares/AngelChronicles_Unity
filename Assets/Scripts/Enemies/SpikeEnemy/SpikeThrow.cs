@@ -7,7 +7,7 @@ public class SpikeThrow : NormalThrow
     public override void ThrowAction(GameObject objectToThrow,Vector3 velocity)
     {
         base.ThrowAction(objectToThrow,velocity);
-        objectToThrow.GetComponent<SpikeCreation>().enabled = true;
+        objectToThrow.AddComponent<SpikeCreation>();
 
     }
 }

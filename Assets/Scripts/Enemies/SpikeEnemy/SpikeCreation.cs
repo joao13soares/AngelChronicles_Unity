@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SpikeCreation : MonoBehaviour
 {
+    
+    
+    
     private void Awake()
     {
         this.enabled = false;
@@ -15,9 +18,12 @@ public class SpikeCreation : MonoBehaviour
         if (other.gameObject.CompareTag("Wall"))
         {
             this.transform.parent = null;
-            this.transform.localScale = new Vector3(1.3f, 0.3f, 1f);
+            this.transform.localScale = new Vector3(1.3f, 0.3f, 2f);
 
             this.transform.parent = other.transform;
+            // this.transform.localScale = new Vector3(transform.lossyScale.x, transform.lossyScale.y, other.transform.lossyScale.z) ;
+
+            
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.tag = "Ground";
 

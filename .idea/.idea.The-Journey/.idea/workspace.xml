@@ -13,6 +13,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -30,12 +32,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
@@ -43,6 +42,13 @@
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeCreation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -119,6 +125,10 @@
       <workItem from="1621171396200" duration="3707000" />
       <workItem from="1622036750746" duration="2167000" />
       <workItem from="1622054272073" duration="7000" />
+      <workItem from="1622065849941" duration="387000" />
+      <workItem from="1622066304820" duration="6469000" />
+      <workItem from="1622077586829" duration="66000" />
+      <workItem from="1622077929949" duration="2250000" />
     </task>
     <servers />
   </component>
