@@ -522,6 +522,8 @@ GameObject:
   - component: {fileID: 7293263871719537748}
   - component: {fileID: 7293263871719537749}
   - component: {fileID: 7293263871719537750}
+  - component: {fileID: 1079710970027282335}
+  - component: {fileID: 7814355836560327043}
   m_Layer: 0
   m_Name: ChopperEnemy
   m_TagString: Untagged
@@ -589,6 +591,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1079710970027282335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635722362612433152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913fad925238bbe4a87db9affd0328e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7814355836560327043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635722362612433152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff00c7c9689e294b9ab04a76b3e0e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doesDamageToPlayer: 0
+  timeShocking: 5
 --- !u!1 &8375537807276592862
 GameObject:
   m_ObjectHideFlags: 0

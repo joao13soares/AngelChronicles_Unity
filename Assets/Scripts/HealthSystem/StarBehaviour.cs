@@ -54,7 +54,6 @@ public class StarBehaviour : MonoBehaviour
             yield return null;
         }
 
-        yield return null;
         
     }
 

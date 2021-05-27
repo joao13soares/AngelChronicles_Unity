@@ -8,7 +8,7 @@ public class SpikeEnemy : Enemy
     void Awake()
     {
         canBeGrabbed = true;
-        grabAction = new NormalGrab();
+        grabAction = new SpikeGrab();
         throwAction = new SpikeThrow();
     }
 }

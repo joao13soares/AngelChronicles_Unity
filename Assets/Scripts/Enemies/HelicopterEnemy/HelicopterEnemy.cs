@@ -8,7 +8,7 @@ public class HelicopterEnemy : Enemy
     void Awake()
     {
         canBeGrabbed = true;
-        grabAction = new NormalGrab();
+        grabAction = new HelicopterGrab();
         consumableAction = new SpawnPrefabConsume();
         throwAction = new NormalThrow();
     }

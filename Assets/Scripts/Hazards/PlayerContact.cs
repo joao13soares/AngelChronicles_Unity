@@ -8,7 +8,17 @@ public class PlayerContact : MonoBehaviour
    {
       HealthManager playerHp = other.gameObject.GetComponent<HealthManager>();
 
+      
+      
+      Debug.Log(other.gameObject);
       if (playerHp != null)
-         playerHp.GetHit();
+         DamagePlayer(playerHp);
+      
+      
+      
    }
+
+   public void DamagePlayer(HealthManager playerHp) => playerHp.GetHit();
+
+
 }

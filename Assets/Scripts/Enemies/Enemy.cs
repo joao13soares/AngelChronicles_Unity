@@ -45,7 +45,6 @@ public class Enemy : MonoBehaviour
     public void GrabAction(float scalingFactor, Transform handTransform, Quaternion handRotation, Vector3 handPosition)
     {
         grabAction.GrabAction(this.gameObject, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
-        canBeGrabbed = false;
 
     }
 

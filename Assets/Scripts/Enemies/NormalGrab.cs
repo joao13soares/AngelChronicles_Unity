@@ -5,9 +5,13 @@ using UnityEngine;
 public class NormalGrab : IGrabbable
 {
 
-    public void GrabAction(GameObject objectToGrab, float scalingFactor, Transform handTransform, Quaternion handRotation, Vector3 handPosition, out Vector3 defaultScale)
+    public virtual void GrabAction(GameObject objectToGrab, float scalingFactor, Transform handTransform, Quaternion handRotation, Vector3 handPosition, out Vector3 defaultScale)
     {
+        
+        
+        Debug.Log("GRABBED");
         Rigidbody rb = objectToGrab.GetComponent<Rigidbody>();
+         objectToGrab.GetComponent<Enemy>().canBeGrabbed = false;
 
         rb.constraints = RigidbodyConstraints.FreezeAll;
         rb.useGravity = false;

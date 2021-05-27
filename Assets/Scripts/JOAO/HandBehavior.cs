@@ -338,8 +338,13 @@ public class HandBehavior : MonoBehaviour
 
          if (temp != null && temp.canBeGrabbed && handState != HandStates.OnBody)
          {
+             Debug.Log("CAN GRAB AGAIN");
              temp.GrabAction( 0.5f, this.transform, this.transform.rotation, this.transform.position);
-             grabbedObj = temp;
+
+             if (transform.childCount > 0)
+             {
+                 grabbedObj = transform.GetChild(0).gameObject.GetComponent<Enemy>();
+             }
 
          }
 
