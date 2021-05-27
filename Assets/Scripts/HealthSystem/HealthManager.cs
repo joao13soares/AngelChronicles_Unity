@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
+
+    
+    
+    
+    
     [SerializeField] Vector3 levelStartPostion;
     Vector3 lastCheckPointPosition;
 
@@ -12,13 +17,21 @@ public class HealthManager : MonoBehaviour
     float lives, hitsRemaining;
     [SerializeField] float currentFeathers;
 
+    
     private bool playerInvincible;
+    [SerializeField] private List<Renderer> renderersToFlash;
     [SerializeField] private const float invincibilityFramesTime = 1.5f;
 
     
     //TESTES
     private Vector3 level1Start = new Vector3(-51, 4, 30);
 
+
+    public delegate void PlayerEvent();
+
+    public event PlayerEvent playerHit;
+    
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,11 +47,14 @@ public class HealthManager : MonoBehaviour
     public void GetHit()
     {
         if (playerInvincible) return;
+        
+        
 
         if (hitsRemaining > 0)
         {
             hitsRemaining--;
             StartCoroutine(InvincibilityFrames());
+            playerHit?.Invoke();
             return;
         }
 
@@ -53,20 +69,37 @@ public class HealthManager : MonoBehaviour
 
     IEnumerator InvincibilityFrames()
     {
+        //
+        // Renderer temp = this.GetComponent<Renderer>();
 
-        Renderer temp = this.GetComponent<Renderer>();
-        
         playerInvincible = true;
+        // temp.enabled = false;
+        //
+        // Vector3 defaultScale = transform.localScale;
         
-        temp.enabled = false;
-        
-        yield return new WaitForSeconds(invincibilityFramesTime);
-        
-        temp.enabled = true;
-        
+        for (float i = 0; i <= invincibilityFramesTime; i += invincibilityFramesTime / 10f)
+        {
+            foreach (Renderer r in renderersToFlash) r.enabled = false;
+            yield return new WaitForSeconds(invincibilityFramesTime/20f);
+            foreach (Renderer r in renderersToFlash) r.enabled = true;
+            yield return new WaitForSeconds(invincibilityFramesTime/20f);
+
+
+        }
+
         playerInvincible = false;
-        
-        
+        yield return null;
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private void SpawnPlayerAtPosition(Vector3 positionToSpawn) => this.transform.position = positionToSpawn;

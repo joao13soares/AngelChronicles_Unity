@@ -16,10 +16,19 @@ public class PlayerMovement : MonoBehaviour
 
     bool jumpQueued;
     public bool jumping;
+    
+    
+    private float gravityDirection;
+    public float gravityForce;
 
+    [SerializeField] private float rotationSpeed;
+    
+    
+    
     void Awake()
     {
         playerRb = this.GetComponent<Rigidbody>();
+        gravityDirection = 1;
     }
 
     void Update()
@@ -31,38 +40,76 @@ public class PlayerMovement : MonoBehaviour
         MovementInput();
         JumpAction();
 
-        if (isMagnetized)
-        {
-            playerRb.useGravity = false;
+        playerRb.AddForce(Physics.gravity * gravityDirection, ForceMode.Acceleration);
 
-            if (!isRoofed)
-            {
-                Magnetize();
-            }
-        }
-        else
-        {
-            playerRb.useGravity = true;
-
-            if (!isGrounded)
-            {
-                Demagnetize();
-            }
-        }
+        
     }
 
-    void Magnetize()
+
+    public void ChangeGravityDirection()
     {
-        playerRb.AddForce(-Physics.gravity, ForceMode.Acceleration);
+        switch (gravityDirection)
+        {
+            case 1:
+                StartCoroutine(RotateToCeiling());
+                break;
+            case -1:
+                break;
+                
+        }
 
-        if(!jumping) this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.right * 180), Time.deltaTime);
+        gravityDirection *= -1;
     }
+    // void Magnetize()
+    // {
+    //     playerRb.AddForce(-Physics.gravity, ForceMode.Acceleration);
+    //
+    //     if(!jumping) this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.right * 180), Time.deltaTime);
+    // }
 
     void Demagnetize()
     {
-        if (!jumping)this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.up * 180), Time.deltaTime);
+        if (!jumping)this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.up * 180), Time.deltaTime );
     }
 
+
+    IEnumerator RotateToCeiling()
+    {
+        // float tolerance = 1f;
+        //
+        //
+        // while (Mathf.Abs(transform.eulerAngles.z ) <=  180f - tolerance )
+        // {
+        //     
+        //     
+        //     Debug.Log(transform.eulerAngles.z);
+        //     this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180), Time.deltaTime * rotationSpeed);
+        //     yield return null;
+        //     
+        //     
+        //
+        // }
+        //
+        
+        
+        while(transform.rotation.z < 180)
+        {
+           // transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(), rotationSpeed * Time.time);
+           //  yield return null;
+
+            transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles,
+                new Vector3(transform.rotation.x, transform.rotation.y, 180), Time.deltaTime);
+            yield return null;
+
+        }
+
+        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180);
+        yield return null;
+
+        
+
+    }
+    
     void MovementInput()
     {
         Vector3 horMov = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));

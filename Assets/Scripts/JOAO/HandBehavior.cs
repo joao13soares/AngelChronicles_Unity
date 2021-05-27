@@ -331,7 +331,7 @@ public class HandBehavior : MonoBehaviour
     
     void OnTriggerStay(Collider other)
      {
-         Debug.Log(other.gameObject.name);
+         // Debug.Log(other.gameObject.name);
 
 
          Enemy temp = other.GetComponent<Enemy>();
