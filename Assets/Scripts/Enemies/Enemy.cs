@@ -9,14 +9,26 @@ public class Enemy : MonoBehaviour
     public bool canBeGrabbed;
     Vector3 defaultScale;
 
-    [SerializeField] protected IThrowable throwAction;
-    [SerializeField] protected IGrabbable grabAction;
-    [SerializeField] protected IConsumable consumableAction;
+     protected IThrowable throwAction;
+     protected IGrabbable grabAction;
+     protected IConsumable consumableAction;
 
     [SerializeField] private GameObject prefabForConsume;
 
     public delegate void EnemyLifeCycle();
     public event EnemyLifeCycle EnemyDied;
+    
+    
+    
+    // Floating Animation Variables
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float floatingSpeed;
+    [SerializeField] private float maxHeightOffset;
+
+    private int dir = 1;
+     private float currentHeightOffset;
+
+
 
 
     void Awake()
@@ -48,6 +60,32 @@ public class Enemy : MonoBehaviour
 
     }
 
+
+
+    // Grabbed Animation
+    // called by the HandBehavior script whenever this instance of Grabbable is the grabbedObj
+    public void GrabbedBehavior(float holderHeight)
+    {
+        // rotation animation
+        this.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+
+        // floating animation - calculate currentHeightOffset
+        currentHeightOffset += dir * floatingSpeed * Time.deltaTime;
+
+        // floating animation - add currentHeightOffset
+        this.transform.position = new Vector3(
+            this.transform.position.x,
+            holderHeight + currentHeightOffset,
+            this.transform.position.z);
+
+        // floating animation - check change of direction
+        if ((currentHeightOffset < 0 && dir == -1) ||
+            (currentHeightOffset >= maxHeightOffset && dir == 1))
+        {
+            dir *= -1;
+        }
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         Enemy temp = other.gameObject.GetComponent<Enemy>();

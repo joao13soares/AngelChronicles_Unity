@@ -34,7 +34,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
@@ -56,12 +55,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -149,6 +151,7 @@
       <workItem from="1622129239121" duration="831000" />
       <workItem from="1622130091854" duration="3175000" />
       <workItem from="1622133348113" duration="1402000" />
+      <workItem from="1622152697544" duration="3257000" />
     </task>
     <servers />
   </component>

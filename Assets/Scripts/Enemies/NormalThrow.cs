@@ -6,7 +6,6 @@ public class NormalThrow : IThrowable
 {
     public virtual void  ThrowAction(GameObject objectToThrow, Vector3 velocity)
     {
-       
         objectToThrow.transform.parent = null;
         objectToThrow.transform.rotation = Quaternion.identity;
 

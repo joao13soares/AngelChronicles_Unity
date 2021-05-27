@@ -204,8 +204,10 @@ public class HandBehavior : MonoBehaviour
     [SerializeField] float maxDist;
     [SerializeField] Transform handHolder;
     
-    Vector3 thrownInitialPos;
+    
+     Vector3 thrownInitialPos;
      Enemy grabbedObj;
+     [SerializeField] private Transform grabbablePlaceHolder;
 
     [SerializeField] public float maxThrowingVelocity;
     public float currentThrowingVelocity;
@@ -237,6 +239,10 @@ public class HandBehavior : MonoBehaviour
 
     void OnBody()
     {
+       
+
+        
+        
         // if hand has no grabbedObj
         if (grabbedObj == null)
         {
@@ -250,7 +256,7 @@ public class HandBehavior : MonoBehaviour
         }
         else
         {
-            // grabbedObj.GrabbedBehavior(this.transform.position.y); // call GrabbedBehavior update function of the grabbedObj
+             grabbedObj.GrabbedBehavior(this.transform.position.y); // call GrabbedBehavior update function of the grabbedObj
 
             // if mouse right button is held pressed
             if (Input.GetMouseButton(1))
@@ -338,12 +344,15 @@ public class HandBehavior : MonoBehaviour
 
          if (temp != null && temp.canBeGrabbed && handState != HandStates.OnBody)
          {
-             Debug.Log("CAN GRAB AGAIN");
-             temp.GrabAction( 0.5f, this.transform, this.transform.rotation, this.transform.position);
+             temp.GrabAction( 0.5f, grabbablePlaceHolder, grabbablePlaceHolder.rotation, grabbablePlaceHolder.position);
 
-             if (transform.childCount > 0)
+             
+             if (grabbablePlaceHolder.childCount > 1)
              {
-                 grabbedObj = transform.GetChild(0).gameObject.GetComponent<Enemy>();
+                 
+                 
+                 Debug.Log(transform.GetChild(1).gameObject);
+                 grabbedObj = grabbablePlaceHolder.GetChild(1).GetComponent<Enemy>();
              }
 
          }

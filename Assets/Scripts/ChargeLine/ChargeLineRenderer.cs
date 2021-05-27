@@ -77,7 +77,7 @@ public class ChargeLineRenderer : MonoBehaviour
                 Vector3 v0XZ = v0; v0XZ.y = 0;
                 Vector3 disti = v0XZ.normalized * distXZi; disti.y = distYi;
 
-                pointsObjs[i].transform.position = handBehavior.transform.position + disti;
+                pointsObjs[i].transform.position = this.transform.position + disti;
             }
         }
     }
