@@ -170,7 +170,8 @@ GameObject:
   - component: {fileID: 2382191172825470137}
   - component: {fileID: 7572072487859220720}
   - component: {fileID: 9006837540207449279}
-  - component: {fileID: 5718611021334810593}
+  - component: {fileID: 4509786881106958589}
+  - component: {fileID: 5800337786204405198}
   m_Layer: 0
   m_Name: JumpEnemy
   m_TagString: Untagged
@@ -223,6 +224,9 @@ MonoBehaviour:
   canBeGrabbed: 0
   prefabForConsume: {fileID: 1516478440128510391, guid: 992fe6e3d27cdbf4a95f66393acdf379,
     type: 3}
+  rotationSpeed: 0
+  floatingSpeed: 0
+  maxHeightOffset: 0
 --- !u!54 &9006837540207449279
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -235,23 +239,35 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
---- !u!65 &5718611021334810593
-BoxCollider:
+--- !u!114 &4509786881106958589
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3604147946279771391}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.031758443, y: 0.042008974, z: 0.020271404}
-  m_Center: {x: -0.0004495544, y: 0.0027676548, z: 3.3467424e-12}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e095fc07f97e04dab5b18f12d2e7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathPoints: []
+--- !u!114 &5800337786204405198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604147946279771391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913fad925238bbe4a87db9affd0328e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9083358907516158266
 GameObject:
   m_ObjectHideFlags: 0

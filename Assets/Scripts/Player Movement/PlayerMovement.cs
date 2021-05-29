@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movementForce;
     Rigidbody playerRb;
-    [SerializeField] bool isGrounded, isRoofed;
+    [SerializeField] public bool isGrounded, isRoofed;
     public bool isMagnetized;
 
     [SerializeField] Camera camera;
@@ -144,13 +144,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!jumpQueued) return;
 
-        playerRb.AddForce(movementForce * this.transform.up, ForceMode.Impulse);
 
+        PlayerJump();
+        
         jumpQueued = false;
         jumping = true;
         isGrounded = false;
         isRoofed = false;
     }
+    
+    public void PlayerJump() =>  playerRb.AddForce(movementForce * this.transform.up, ForceMode.Impulse);
+
 
     void OnCollisionStay(Collision other)
     {

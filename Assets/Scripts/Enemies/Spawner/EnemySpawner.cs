@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    
+    [SerializeField] private Transform[] pathPoints;
     [SerializeField]private GameObject enemyToSpawnPrefab;
     private GameObject currentEnemyAlive;
 
@@ -47,6 +47,7 @@ public class EnemySpawner : MonoBehaviour
     void InstantiateEnemyPrefab()
     {
         currentEnemyAlive = Instantiate(enemyToSpawnPrefab, spawnerTransform.position, spawnerTransform.rotation);
+        currentEnemyAlive.GetComponent<EnemyMovement>().SetPath(pathPoints);
         currentEnemyAlive.GetComponent<Enemy>().EnemyDied += SpawnEnemy;
     }
     

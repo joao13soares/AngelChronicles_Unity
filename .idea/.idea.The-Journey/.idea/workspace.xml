@@ -34,7 +34,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
@@ -43,10 +42,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/ViewPlayerBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeEnemy.cs" />
@@ -67,6 +64,10 @@
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/ToonShder/Toon_Shader.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -157,6 +158,8 @@
       <workItem from="1622152697544" duration="3257000" />
       <workItem from="1622204875572" duration="36000" />
       <workItem from="1622207867295" duration="1187000" />
+      <workItem from="1622293455284" duration="950000" />
+      <workItem from="1622294498973" duration="6591000" />
     </task>
     <servers />
   </component>
