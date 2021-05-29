@@ -17,6 +17,7 @@ public class WaterBob : MonoBehaviour
     private Vector3 initialPosition;
     private Vector3 InitialRotation;
     private float offset;
+    private float offset2;
 
     private void Awake()
     {
@@ -24,14 +25,16 @@ public class WaterBob : MonoBehaviour
         InitialRotation = transform.rotation.eulerAngles;
 
         offset = 1 - (Random.value * 2);
+        offset2 = (Random.value * 2);
     }
 
     private void Update()
     {
         transform.position = initialPosition - Vector3.up * Mathf.Sin((Time.time + offset) * period) * height;
-        float eulerX = InitialRotation.x - Vector3.right.x * Mathf.Sin((Time.time + offset) * rotationP) * rotation;
 
-        float eulerZ = InitialRotation.x - Vector3.forward.z * Mathf.Sin((Time.time + offset) * rotationP) * rotation;
+        float eulerX = InitialRotation.x - Vector3.right.x * Mathf.Sin((Time.time + offset) * rotationP) * rotation;
+        float eulerZ = InitialRotation.x - Vector3.forward.z * Mathf.Sin((Time.time + offset2) * rotationP) * rotation;
+
         transform.eulerAngles = new Vector3(eulerX, transform.eulerAngles.y, eulerZ);
     }
 }
