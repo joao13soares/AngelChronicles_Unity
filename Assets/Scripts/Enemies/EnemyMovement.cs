@@ -168,7 +168,7 @@ public class EnemyMovement : MonoBehaviour
         
         Vector3 desiredForward = (correctedTargetPos - transform.position).normalized;
 
-        float targetDirectionTolerance = 0.001f;
+        float targetDirectionTolerance = 0.00005f;
         
         // Debug.Log(Mathf.Abs(Vector3.Dot(transform.forward, desiredForward)));
         
@@ -180,14 +180,18 @@ public class EnemyMovement : MonoBehaviour
         }
 
         
-        transform.forward = Vector3.Slerp(transform.forward,desiredForward ,0.01f);
+        transform.forward = Vector3.Slerp(transform.forward,desiredForward ,0.05f);
     }
 
     private void WalkTowardsTarget()
     {
         float targetArea = 0.5f;
+        Vector3 projectedTarget = pathPoints[currentTargetIndex].position;
+        projectedTarget.y *= 0;
+        Vector3 currentPos = transform.position;
+        currentPos.y *= 0;
 
-        float currentDistance = (pathPoints[currentTargetIndex].position - transform.position).magnitude;
+        float currentDistance = (projectedTarget - currentPos).magnitude;
 
          Debug.Log(currentDistance);
          
