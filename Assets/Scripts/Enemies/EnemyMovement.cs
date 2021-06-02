@@ -193,7 +193,6 @@ public class EnemyMovement : MonoBehaviour
 
         float currentDistance = (projectedTarget - currentPos).magnitude;
 
-         Debug.Log(currentDistance);
          
          
         if (currentDistance <= targetArea)
