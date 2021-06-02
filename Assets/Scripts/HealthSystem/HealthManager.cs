@@ -6,12 +6,16 @@ public class HealthManager : MonoBehaviour
 {
 
     [SerializeField] GameObject levelStartPostion;
-   public Vector3 lastCheckPointPosition;
+    public Vector3 lastCheckPointPosition;
 
-    const float featherNeededForOneLife = 10;
+    public float feathersNeededForOneLife = 3;
 
     float lives, hitsRemaining;
+
+    public float GetCurrentLives => lives;
+    
     [SerializeField] float currentFeathers;
+    public float GetCurrentFeathers => currentFeathers;
 
     
     private bool playerInvincible;
@@ -22,7 +26,9 @@ public class HealthManager : MonoBehaviour
     public delegate void PlayerEvent();
 
     public event PlayerEvent playerHit;
-    public event PlayerEvent playerRespawn;
+    public event PlayerEvent playerRespawned;
+
+    public event PlayerEvent featherCollected, RemainingLivesChanged;
     
     
     // Start is called before the first frame update
@@ -90,9 +96,12 @@ public class HealthManager : MonoBehaviour
     private void Respawn()
     {
         SpawnPlayerAtPosition(lastCheckPointPosition);
+        
         lives--;
         hitsRemaining = 3;
-        playerRespawn?.Invoke();
+        
+        playerRespawned?.Invoke();
+        RemainingLivesChanged?.Invoke();
     }
 
     private void Restart()
@@ -106,11 +115,17 @@ public class HealthManager : MonoBehaviour
     public void FeatherCollected()
     {
         currentFeathers++;
+        featherCollected?.Invoke();
 
-        if (currentFeathers != featherNeededForOneLife) return;
+        if (currentFeathers != feathersNeededForOneLife) return;
 
+        
+        
         lives++;
         currentFeathers = 0;
+        
+        featherCollected?.Invoke();
+        RemainingLivesChanged?.Invoke();
     }
 
     public void HaloCollected() => lives++;
