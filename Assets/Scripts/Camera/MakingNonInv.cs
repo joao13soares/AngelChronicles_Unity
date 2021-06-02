@@ -14,4 +14,6 @@ public class MakingNonInv : MonoBehaviour
             LighHouseExterior.GetComponent<MeshRenderer>().material.SetFloat("_Alpha", (1));
         }
     }
+
+   
 }

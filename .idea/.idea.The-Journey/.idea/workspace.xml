@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,6 +71,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MakingNonInv.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -163,6 +166,7 @@
       <workItem from="1622293455284" duration="950000" />
       <workItem from="1622294498973" duration="6591000" />
       <workItem from="1622644585376" duration="1400000" />
+      <workItem from="1622651383402" duration="2830000" />
     </task>
     <servers />
   </component>

@@ -1345,7 +1345,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35275a7a052dbf143956ef45243a96b2, type: 2}
+      objectReference: {fileID: 2100000, guid: 02e821df727072d43986771aad30d3f7, type: 2}
     - target: {fileID: -215882532355388927, guid: 22d8ec8e7c275dc4f91dbfe1b81768fe,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -4303,6 +4303,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8536425139288874787, guid: 83f5a36cf75789743a0796b5bb971010, type: 3}
+--- !u!1 &403085701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403085702}
+  - component: {fileID: 403085703}
+  - component: {fileID: 403085704}
+  m_Layer: 0
+  m_Name: LightHouseStayTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403085702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403085701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0382, z: 0}
+  m_LocalScale: {x: 0.020214083, y: 0.035766225, z: 0.020214083}
+  m_Children: []
+  m_Father: {fileID: 41830210}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &403085703
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403085701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5513934
+  m_Height: 2.976662
+  m_Direction: 1
+  m_Center: {x: 0.051392946, y: 0.10230927, z: -0.00000007863118}
+--- !u!114 &403085704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403085701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7107c3f6fe483b4ebebd6c8b3574008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantityToAlter: 1
+  lightHouseRenderer: {fileID: 1289050984}
 --- !u!1 &403678614
 GameObject:
   m_ObjectHideFlags: 3
@@ -4722,7 +4782,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440209224}
-  m_LocalRotation: {x: 0.0086481795, y: -0.7553341, z: 0.009969773, w: 0.6552069}
+  m_LocalRotation: {x: 0.00864818, y: -0.7553341, z: 0.009969772, w: 0.6552071}
   m_LocalPosition: {x: 93.258606, y: 3.6379035, z: 6.955986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11664,6 +11724,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 218275796}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1289050984 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2632818745262655710, guid: 22d8ec8e7c275dc4f91dbfe1b81768fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 218275796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1289050985
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11804,7 +11870,6 @@ GameObject:
   - component: {fileID: 1328385734}
   - component: {fileID: 1328385733}
   - component: {fileID: 1328385732}
-  - component: {fileID: 1328385735}
   m_Layer: 0
   m_Name: LightHouseTrigger
   m_TagString: Untagged
@@ -11891,19 +11956,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1328385735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328385730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71a46ff33e4c70f41aa409563b65ab38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LighHouseExterior: {fileID: 1289050983}
 --- !u!1 &1330415190 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5922045972663253149, guid: b49c25fb55cb14e41bfc4412992dcc27,
@@ -11994,7 +12046,6 @@ GameObject:
   - component: {fileID: 1341904102}
   - component: {fileID: 1341904101}
   - component: {fileID: 1341904100}
-  - component: {fileID: 1341904103}
   m_Layer: 0
   m_Name: LightHouseTrigger (3)
   m_TagString: Untagged
@@ -12081,19 +12132,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1341904103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341904098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f6c2824f13e764bb14037aaf0aa124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LighHouseExterior: {fileID: 1289050983}
 --- !u!1 &1342633815
 GameObject:
   m_ObjectHideFlags: 0
