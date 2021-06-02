@@ -22,8 +22,8 @@ public class StarBehaviour : MonoBehaviour
         colorsForLife[0] = Color.yellow;
         colorsForLife[1] = new Vector4(1f, 0.5f, 0f, 0f);
         colorsForLife[2] = Color.red;
-        
-        
+
+        playerHealth.playerRespawn += ChangeColor;
         
         playerHealth.playerHit += ChangeColor;
         StartCoroutine(OffSetVariation());

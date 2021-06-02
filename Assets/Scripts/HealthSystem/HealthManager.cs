@@ -5,12 +5,8 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
 
-    
-    
-    
-    
-    [SerializeField] Vector3 levelStartPostion;
-    Vector3 lastCheckPointPosition;
+    [SerializeField] GameObject levelStartPostion;
+   public Vector3 lastCheckPointPosition;
 
     const float featherNeededForOneLife = 10;
 
@@ -23,20 +19,16 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private const float invincibilityFramesTime = 1.5f;
 
     
-    //TESTES
-    private Vector3 level1Start = new Vector3(-51, 4, 30);
-
-
     public delegate void PlayerEvent();
 
     public event PlayerEvent playerHit;
+    public event PlayerEvent playerRespawn;
     
     
     // Start is called before the first frame update
     void Awake()
     {
-        //lastCheckPointPosition = levelStartPostion;
-        lastCheckPointPosition = level1Start;
+        lastCheckPointPosition = levelStartPostion.transform.position;
         lives = 3;
         hitsRemaining = 3;
         playerInvincible = false;
@@ -50,7 +42,7 @@ public class HealthManager : MonoBehaviour
         
         
 
-        if (hitsRemaining > 0)
+        if (hitsRemaining > 1)
         {
             hitsRemaining--;
             StartCoroutine(InvincibilityFrames());
@@ -91,15 +83,6 @@ public class HealthManager : MonoBehaviour
         yield return null;
 
 
-
-
-
-
-
-
-
-
-
     }
 
     private void SpawnPlayerAtPosition(Vector3 positionToSpawn) => this.transform.position = positionToSpawn;
@@ -109,12 +92,13 @@ public class HealthManager : MonoBehaviour
         SpawnPlayerAtPosition(lastCheckPointPosition);
         lives--;
         hitsRemaining = 3;
+        playerRespawn?.Invoke();
     }
 
     private void Restart()
     {
         // RestartLevel Logic
-        SpawnPlayerAtPosition(levelStartPostion);
+        SpawnPlayerAtPosition(levelStartPostion.transform.position);
         lives = 1;
     }
 
