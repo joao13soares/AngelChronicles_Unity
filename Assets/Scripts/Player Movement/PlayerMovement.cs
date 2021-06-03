@@ -8,13 +8,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movementForce;
+    [SerializeField] public float jumpForce;
     Rigidbody playerRb;
     [SerializeField] public bool isGrounded, isRoofed;
+    public bool isDoubleJuping;
     public bool isMagnetized;
 
     [SerializeField] Camera camera;
 
-    bool jumpQueued;
+    public bool jumpQueued;
     public bool jumping;
     
     
@@ -153,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         isRoofed = false;
     }
     
-    public void PlayerJump() =>  playerRb.AddForce(movementForce * this.transform.up, ForceMode.Impulse);
+    public void PlayerJump() =>  playerRb.AddForce(jumpForce * this.transform.up, ForceMode.Impulse);
 
 
     void OnCollisionStay(Collision other)
@@ -164,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             jumping = false;
-            playerRb.velocity = Vector3.zero;
+            if (!isDoubleJuping) playerRb.velocity = Vector3.zero;
             this.transform.eulerAngles = new Vector3(0, this.transform.eulerAngles.y, 0);
         }
 
@@ -172,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isRoofed = true;
             jumping = false;
-            playerRb.velocity = Vector3.zero;
+            if (!isDoubleJuping) playerRb.velocity = Vector3.zero;
             this.transform.eulerAngles = new Vector3(0, this.transform.eulerAngles.y, 180);
         }
     }

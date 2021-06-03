@@ -5,32 +5,34 @@ using UnityEngine;
 public class DoubleJumpMechanic : MonoBehaviour
 {
     GameObject player;
-    private PlayerMovement playerMov;
     [SerializeField] float bounciness;
     [SerializeField] float maxBounceTime;
     float currentBounceTime = 0;
 
+    float defaultPlayerJumpForce;
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerMov = player.GetComponent<PlayerMovement>();
-        //
-        // this.transform.localPosition -= player.transform.lossyScale.y * 1f * player.transform.up;
-         this.transform.localScale /=   player.transform.localScale.x ;
-         
-         playerMov.PlayerJump();
-
-        // player.GetComponent<Rigidbody>().AddForce(bounciness * this.transform.up, ForceMode.Impulse);
         
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerMovement>().isDoubleJuping = true;
+        this.transform.position = player.transform.position - this.GetComponent<MeshRenderer>().bounds.extents.y * player.transform.up;
+        //player.GetComponent<Rigidbody>().AddForce(bounciness * this.transform.up, ForceMode.Impulse);
+        defaultPlayerJumpForce = player.GetComponent<PlayerMovement>().jumpForce;
+        player.GetComponent<PlayerMovement>().jumpForce = bounciness;
+        if (!player.GetComponent<PlayerMovement>().jumping) player.GetComponent<PlayerMovement>().jumpQueued = true;
     }
 
     void Update()
     {
+        player.GetComponent<PlayerMovement>().isGrounded = true;
+        player.GetComponent<PlayerMovement>().isRoofed = true;
 
-        playerMov.isGrounded = true;
-        
         if (Input.GetKey(KeyCode.Space) || currentBounceTime >= maxBounceTime)
         {
+            player.GetComponent<PlayerMovement>().jumpForce = defaultPlayerJumpForce;
+            player.GetComponent<PlayerMovement>().jumpQueued = true;
+            player.GetComponent<PlayerMovement>().isDoubleJuping = false;
             GameObject.DestroyImmediate(this.gameObject);
         }
         else

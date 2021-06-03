@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d088e9bac02a24d97e63ce2afab91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounciness: 8
+  bounciness: 12
   maxBounceTime: 1000
