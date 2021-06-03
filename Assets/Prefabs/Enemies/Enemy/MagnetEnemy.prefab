@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7528881614234916363}
   - component: {fileID: 4212380050171289338}
   - component: {fileID: 3990249391403230366}
+  - component: {fileID: 6410046430422845153}
   m_Layer: 0
   m_Name: MagnetEnemy
   m_TagString: Untagged
@@ -110,6 +111,9 @@ MonoBehaviour:
   canBeGrabbed: 0
   prefabForConsume: {fileID: 5699260476332860338, guid: 3584dab4fca0d594cad1b373733e01c0,
     type: 3}
+  rotationSpeed: 0
+  floatingSpeed: 0
+  maxHeightOffset: 0
 --- !u!54 &3990249391403230366
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +130,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6410046430422845153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528881614234916361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e095fc07f97e04dab5b18f12d2e7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathPoints: []

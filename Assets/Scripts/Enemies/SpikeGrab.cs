@@ -16,13 +16,15 @@ public class SpikeGrab : NormalGrab
        
         if (objectToGrab.GetComponent<FieldOfViewDetection>().isPlayerDetected)
         {
-            Debug.Log("aqui tbm n" +GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>());
+            
+            Debug.Log("NAO AGARRA CARAHO");
             objectToGrab.GetComponent<PlayerContact>().DamagePlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>());
+            return;
 
         }
 
-        
-        else 
+        Debug.Log(" AGARRA PFF");
+
             base.GrabAction(objectToGrab, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
         
         

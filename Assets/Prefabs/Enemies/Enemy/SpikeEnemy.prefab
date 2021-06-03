@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2304496013219326202}
   - component: {fileID: 3008309139678863932}
   - component: {fileID: 7987665430909830320}
+  - component: {fileID: 5968895864733203542}
   m_Layer: 9
   m_Name: SpikeEnemy
   m_TagString: Untagged
@@ -111,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &2304496013219326202
 MonoBehaviour:
@@ -127,6 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeGrabbed: 0
   prefabForConsume: {fileID: 0}
+  rotationSpeed: 0
+  floatingSpeed: 0
+  maxHeightOffset: 0
 --- !u!114 &3008309139678863932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +162,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913fad925238bbe4a87db9affd0328e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5968895864733203542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2304496013219326200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e095fc07f97e04dab5b18f12d2e7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathPoints: []

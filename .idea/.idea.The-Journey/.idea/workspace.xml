@@ -51,12 +51,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/StarBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
@@ -76,6 +74,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -174,6 +174,7 @@
       <workItem from="1622728810805" duration="74000" />
       <workItem from="1622728897028" duration="905000" />
       <workItem from="1622731014964" duration="2659000" />
+      <workItem from="1622738969224" duration="2471000" />
     </task>
     <servers />
   </component>

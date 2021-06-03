@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &5483567054970154037
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672734198445093631}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fa462d84f03b4a4789fe5a72f9f34c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &5483567053474800193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672734198845097574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1ba088bdb825d64fb7e6c0bd2b9c5a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4672734200168719708
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,10 +119,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 8
+  jumpForce: 0
   isGrounded: 0
   isRoofed: 0
+  isDoubleJuping: 0
   isMagnetized: 0
   camera: {fileID: 0}
+  jumpQueued: 0
   jumping: 0
   gravityForce: 0
   rotationSpeed: 0
@@ -100,7 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901a177320ccfa94c88a088f28875177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelStartPostion: {x: 0, y: 0, z: 0}
+  levelStartPostion: {fileID: 0}
+  lastCheckPointPosition: {x: 0, y: 0, z: 0}
+  feathersNeededForOneLife: 3
   currentFeathers: 0
   renderersToFlash:
   - {fileID: 1436253755509450879}
@@ -119,25 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyAnimator: {fileID: 5483567053474800193}
   handAnimator: {fileID: 5483567054970154037}
---- !u!95 &5483567053474800193
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4672734198845097574}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1ba088bdb825d64fb7e6c0bd2b9c5a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5483567053536544466
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,25 +340,6 @@ Transform:
   m_Father: {fileID: 5483567054364078947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5483567054970154037
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4672734198445093631}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9fa462d84f03b4a4789fe5a72f9f34c4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5483567055114293093
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +452,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Angel_body_anim
       objectReference: {fileID: 0}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd6cafae92297fa488da1e93c360f728, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: bf56eb94267e4a6458e8d02c6111e1d9, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9801770e0a0209c41ac73b1f63aa04d3, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81fd82c534b87e24e8e7344304da3f9f, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: d93d895bff091b74d9af786d13b38cdd, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342f62162ad301a47a82107198cfbc24, type: 2}
+    - target: {fileID: 6915015546735973192, guid: bbb7de2d5a5fa2f4b84d5e9f24026747,
+        type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67fe674734b28bd46a6aaf704a7220e9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbb7de2d5a5fa2f4b84d5e9f24026747, type: 3}
 --- !u!1 &4672734198845097574 stripped
@@ -544,6 +584,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4157456459163486426, guid: 6f1e9089b14d3584aa5eb4836769ed85,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67fe674734b28bd46a6aaf704a7220e9, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f1e9089b14d3584aa5eb4836769ed85,
         type: 3}
       propertyPath: m_Name

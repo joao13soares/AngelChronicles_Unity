@@ -10,9 +10,11 @@ public class NormalGrab : IGrabbable
         
 
         objectToGrab.GetComponent<Collider>().enabled = false;
+        objectToGrab.GetComponent<Enemy>().canBeGrabbed = false;
+        objectToGrab.GetComponent<EnemyMovement>().enabled = false;
+
         
         Rigidbody rb = objectToGrab.GetComponent<Rigidbody>();
-         objectToGrab.GetComponent<Enemy>().canBeGrabbed = false;
 
         rb.constraints = RigidbodyConstraints.FreezeAll;
         rb.useGravity = false;
