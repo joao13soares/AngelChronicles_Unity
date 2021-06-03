@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -128,5 +129,5 @@ public class HealthManager : MonoBehaviour
         RemainingLivesChanged?.Invoke();
     }
 
-    public void HaloCollected() => lives++;
+    public void HaloCollected() => SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 }

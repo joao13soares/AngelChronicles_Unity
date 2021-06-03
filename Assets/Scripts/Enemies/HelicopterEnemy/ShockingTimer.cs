@@ -7,7 +7,7 @@ public class ShockingTimer : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    
+    [SerializeField] private Material glassShock;
     public bool doesDamageToPlayer;
 
 
@@ -19,8 +19,12 @@ public class ShockingTimer : MonoBehaviour
     IEnumerator ItsShockingTime()
     {
         doesDamageToPlayer = true;
+        glassShock.EnableKeyword("_EMISSION");
         yield return new WaitForSeconds(timeShocking);
         doesDamageToPlayer = false;
+        glassShock.DisableKeyword("_EMISSION");
+
+
     }
 
     private void Update()

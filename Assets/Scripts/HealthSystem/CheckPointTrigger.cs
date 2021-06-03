@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CheckPointTrigger : MonoBehaviour
 {
+    [SerializeField] private GameObject checkPointSign;
+    
     [SerializeField]
     GameObject CheckPoint;
 
@@ -15,6 +17,7 @@ public class CheckPointTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             healthManager.lastCheckPointPosition = CheckPoint.transform.position;
+            checkPointSign.GetComponent<Animation>().Play();
         }
     }
 }

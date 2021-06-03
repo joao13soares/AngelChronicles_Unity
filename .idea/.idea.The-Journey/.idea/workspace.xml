@@ -25,7 +25,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/HelicopterEnemy/HelicopterConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HelicopterEnemy/HelicopterMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GrabActions/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ConsumableBehaviours/DoubleJumpConsumable.cs" />
@@ -53,7 +52,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
@@ -62,17 +60,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/ToonShder/Toon_Shader.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MakingNonInv.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewScene.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewSceneTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -167,6 +170,10 @@
       <workItem from="1622294498973" duration="6591000" />
       <workItem from="1622644585376" duration="1400000" />
       <workItem from="1622651383402" duration="2830000" />
+      <workItem from="1622724335945" duration="10000" />
+      <workItem from="1622728810805" duration="74000" />
+      <workItem from="1622728897028" duration="905000" />
+      <workItem from="1622731014964" duration="2659000" />
     </task>
     <servers />
   </component>

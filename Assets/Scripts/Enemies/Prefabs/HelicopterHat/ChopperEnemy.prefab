@@ -619,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff00c7c9689e294b9ab04a76b3e0e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glassShock: {fileID: 2100000, guid: 015ec9b8283e865438f1be5039c94638, type: 2}
   doesDamageToPlayer: 0
   timeShocking: 5
 --- !u!114 &-1090041114403731094

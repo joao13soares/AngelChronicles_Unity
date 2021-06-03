@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Outliner"
+﻿Shader "My/Outliner"
 {
 	Properties
 	{
