@@ -61,8 +61,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-
-    // Grabbed Animation
     // called by the HandBehavior script whenever this instance of Grabbable is the grabbedObj
     public void GrabbedBehavior(float holderHeight)
     {

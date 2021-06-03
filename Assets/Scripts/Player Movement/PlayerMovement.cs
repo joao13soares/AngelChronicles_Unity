@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -11,8 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float jumpForce;
     Rigidbody playerRb;
     [SerializeField] public bool isGrounded, isRoofed;
-    public bool isDoubleJuping;
+    
+    
+    public bool isDoubleJumping;
     public bool isMagnetized;
+    public bool isOnHeli;
 
     [SerializeField] Camera camera;
 
@@ -24,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public float gravityForce;
 
     [SerializeField] private float rotationSpeed;
-    
-    
+
+   
     
     void Awake()
     {
@@ -43,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
         JumpAction();
 
         playerRb.AddForce(Physics.gravity * gravityDirection, ForceMode.Acceleration);
+        
+        
+        if(isMagnetized) Magnetize();
+        else Demagnetize();
 
         
     }
@@ -62,16 +70,17 @@ public class PlayerMovement : MonoBehaviour
 
         gravityDirection *= -1;
     }
-    // void Magnetize()
-    // {
-    //     playerRb.AddForce(-Physics.gravity, ForceMode.Acceleration);
-    //
-    //     if(!jumping) this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.right * 180), Time.deltaTime);
-    // }
+    
+    
+    
+    void Magnetize()
+    {
+        if (!jumping && !isRoofed && !isOnHeli && !isDoubleJumping)this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.right * 180), Time.deltaTime);
+    }
 
     void Demagnetize()
     {
-        if (!jumping)this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.up * 180), Time.deltaTime );
+        if (!jumping && !isGrounded && !isOnHeli && !isDoubleJumping)this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.Euler(Vector3.up * 180), Time.deltaTime );
     }
 
 
@@ -147,15 +156,19 @@ public class PlayerMovement : MonoBehaviour
         if (!jumpQueued) return;
 
 
-        PlayerJump();
+        PlayerJump(jumpForce);
         
         jumpQueued = false;
         jumping = true;
         isGrounded = false;
         isRoofed = false;
     }
-    
-    public void PlayerJump() =>  playerRb.AddForce(jumpForce * this.transform.up, ForceMode.Impulse);
+
+    public void PlayerJump(float force)
+    {
+        playerRb.velocity = Vector3.zero;
+        playerRb.AddForce(force * this.transform.up, ForceMode.Impulse);
+    } 
 
 
     void OnCollisionStay(Collision other)
@@ -166,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             jumping = false;
-            if (!isDoubleJuping) playerRb.velocity = Vector3.zero;
+            if (!isDoubleJumping) playerRb.velocity = Vector3.zero;
             this.transform.eulerAngles = new Vector3(0, this.transform.eulerAngles.y, 0);
         }
 
@@ -174,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isRoofed = true;
             jumping = false;
-            if (!isDoubleJuping) playerRb.velocity = Vector3.zero;
+            if (!isDoubleJumping) playerRb.velocity = Vector3.zero;
             this.transform.eulerAngles = new Vector3(0, this.transform.eulerAngles.y, 180);
         }
     }

@@ -24,7 +24,7 @@ public class NormalGrab : IGrabbable
         objectToGrab.transform.localScale = objectToGrab.transform.localScale.normalized * scalingFactor; // scale grabbedObj to fit the hand object
         objectToGrab.transform.parent = grabbablePlaceHolderTransform;
         objectToGrab.transform.rotation = grabbablePlaceHolderTransform.rotation;
-        objectToGrab.transform.position = grabbablePlaceHolderTransform.position;
+        objectToGrab.transform.localPosition = Vector3.zero;
         //objectToGrab.transform.Translate((objectToGrab.transform.lossyScale.z + handTransform.GetChild(0).lossyScale.z) * 0.75f * handTransform.forward, Space.World); // position this grabbedObj in front of the hand object
         
     }

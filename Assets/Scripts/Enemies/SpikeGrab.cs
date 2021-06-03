@@ -13,11 +13,12 @@ public class SpikeGrab : NormalGrab
 
         defaultScale = Vector3.one; // out needs to be assigned so this is here to make compiling possible
 
-       
+        Debug.Log("NAO AGARRA CARAHO" + objectToGrab);
+
+        
         if (objectToGrab.GetComponent<FieldOfViewDetection>().isPlayerDetected)
         {
             
-            Debug.Log("NAO AGARRA CARAHO");
             objectToGrab.GetComponent<PlayerContact>().DamagePlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>());
             return;
 
