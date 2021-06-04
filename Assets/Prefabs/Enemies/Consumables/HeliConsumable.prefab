@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyingVelocity: 2
-  maxFlyingTime: 5
+  maxFlyingTime: 11
   poofSmokePrefab: {fileID: 8514535905209049849, guid: 21bf73890feea374b81e5d4a97ee31f8,
     type: 3}
 --- !u!65 &-5133917033606891373

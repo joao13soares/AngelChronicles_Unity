@@ -25,7 +25,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GrabActions/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ConsumableBehaviours/DoubleJumpConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IThrowable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ThrowActions/NormalThrow.cs" />
@@ -76,6 +75,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shader/Grass/MyGrassShader.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -182,6 +182,8 @@
       <workItem from="1622755533412" duration="454000" />
       <workItem from="1622756085797" duration="2596000" />
       <workItem from="1622759537612" duration="3443000" />
+      <workItem from="1622765945372" duration="18000" />
+      <workItem from="1622766226061" duration="1211000" />
     </task>
     <servers />
   </component>
