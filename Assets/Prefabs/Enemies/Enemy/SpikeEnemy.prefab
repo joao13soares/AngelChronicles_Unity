@@ -143,11 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eefe45cff65dc74e9ad637b5114f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTransform: {fileID: 0}
-  playerTransform: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2560
   fovAngle: 90
   detectRange: 15
 --- !u!114 &7987665430909830320

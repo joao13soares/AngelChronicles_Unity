@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FieldOfViewDetection : MonoBehaviour
-{
-    [SerializeField] private Transform enemyTransform;
-    [SerializeField] private Transform playerTransform;
+{   
+    private Transform enemyTransform;
+    private Transform playerTransform;
+    private Transform playerPositionCorrectedTransform;
     [SerializeField] private LayerMask enemyLayer;
 
     public float fovAngle;
@@ -19,12 +20,14 @@ public class FieldOfViewDetection : MonoBehaviour
     private void Awake()
     {
         enemyTransform = this.transform;
+        playerPositionCorrectedTransform = GameObject.Find("CameraViewPoint").transform;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     private bool IsAngleValid()
     {
-        Vector3 toPlayer = playerTransform.position - enemyTransform.position;
+        Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
         toPlayer.y *= 0f; // Dont care about Y, we make it 2D 
 
         float angleBetween = Vector3.Angle(enemyTransform.forward, toPlayer);
@@ -38,7 +41,7 @@ public class FieldOfViewDetection : MonoBehaviour
     {
         RaycastHit hit;
 
-        Vector3 toPlayer = playerTransform.position - enemyTransform.position;
+        Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
 
 
 
@@ -72,7 +75,7 @@ public class FieldOfViewDetection : MonoBehaviour
         Gizmos.DrawRay(enemyTransform.position, fovLine1);
         Gizmos.DrawRay(enemyTransform.position, fovLine2);
 
-        Vector3 toPlayer = playerTransform.position - enemyTransform.position;
+        Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
         toPlayer = Vector3.ClampMagnitude(toPlayer, detectRange);
 
         

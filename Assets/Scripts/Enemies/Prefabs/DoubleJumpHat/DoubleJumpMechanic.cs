@@ -24,7 +24,7 @@ public class DoubleJumpMechanic : MonoBehaviour
 
         if (!player.GetComponent<PlayerMovement>().jumping)
         {
-            player.GetComponent<PlayerMovement>().PlayerJump(bounciness);
+            player.GetComponent<PlayerMovement>().Jump(bounciness);
         }
     }
 
@@ -32,7 +32,7 @@ public class DoubleJumpMechanic : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) || currentBounceTime >= maxBounceTime)
         {
-            player.GetComponent<PlayerMovement>().PlayerJump(bounciness);
+            player.GetComponent<PlayerMovement>().Jump(bounciness);
 
             player.GetComponent<PlayerMovement>().isDoubleJumping = false;
             

@@ -42,17 +42,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/ViewPlayerBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/DamageGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/StarBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/ToonShder/Toon_Shader.shader" />
@@ -69,13 +66,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -96,6 +96,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -177,7 +178,10 @@
       <workItem from="1622738969224" duration="3627000" />
       <workItem from="1622748374380" duration="294000" />
       <workItem from="1622748756141" duration="1842000" />
-      <workItem from="1622752028635" duration="2300000" />
+      <workItem from="1622752028635" duration="2364000" />
+      <workItem from="1622755533412" duration="454000" />
+      <workItem from="1622756085797" duration="2596000" />
+      <workItem from="1622759537612" duration="3443000" />
     </task>
     <servers />
   </component>

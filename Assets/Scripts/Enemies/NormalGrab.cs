@@ -21,10 +21,27 @@ public class NormalGrab : IGrabbable
         rb.velocity = Vector3.zero; // cancel all existing forces on this rigidbody
 
         defaultScale = objectToGrab.transform.localScale; // save defaultScale of this grabbedObj
-        objectToGrab.transform.localScale = objectToGrab.transform.localScale.normalized * scalingFactor; // scale grabbedObj to fit the hand object
+        
+        // objectToGrab.transform.localScale /= 3;
+        
+        
+
+        Vector3 rendererBounds = objectToGrab.GetComponentInChildren<MeshRenderer>().bounds.size;
+
+        float maxAxisScale = Mathf.Max(rendererBounds.x, rendererBounds.y, rendererBounds.z);
+        
+        objectToGrab.transform.localScale /= maxAxisScale;
+        
+        objectToGrab.transform.localScale *= scalingFactor;
+        
+
+        
+        /*Vector3.one * scalingFactor*/ // scale grabbedObj to fit the hand object
         objectToGrab.transform.parent = grabbablePlaceHolderTransform;
         objectToGrab.transform.rotation = grabbablePlaceHolderTransform.rotation;
-        objectToGrab.transform.localPosition = Vector3.zero;
+        objectToGrab.transform.position = grabbablePlaceHolderTransform.position;
+        
+        
         //objectToGrab.transform.Translate((objectToGrab.transform.lossyScale.z + handTransform.GetChild(0).lossyScale.z) * 0.75f * handTransform.forward, Space.World); // position this grabbedObj in front of the hand object
         
     }

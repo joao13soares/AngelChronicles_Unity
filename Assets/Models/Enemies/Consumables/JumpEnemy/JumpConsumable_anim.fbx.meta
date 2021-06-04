@@ -7,7 +7,7 @@ ModelImporter:
       74: 1827226128182048838
     second: OnJumperDown_Consumable
   - first:
-      74: 8663860144329957392
+      74: -998496362607748373
     second: OnJumperUp_Consumable
   externalObjects: {}
   materials:

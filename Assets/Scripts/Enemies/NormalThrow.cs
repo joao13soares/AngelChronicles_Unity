@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class NormalThrow : IThrowable
@@ -9,6 +10,8 @@ public class NormalThrow : IThrowable
         objectToThrow.transform.parent = null;
         objectToThrow.transform.rotation = Quaternion.identity;
 
+       GameObject.DestroyImmediate(objectToThrow.GetComponent<PlayerContact>());
+        
          Rigidbody rb = objectToThrow.GetComponent<Rigidbody>();
          Collider collider  = objectToThrow.GetComponent<Collider>();
 

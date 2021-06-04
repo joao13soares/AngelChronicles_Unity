@@ -30,6 +30,9 @@ public class Enemy : MonoBehaviour
 
 
 
+     private float defaultY;
+     
+
 
     void Awake()
     {
@@ -42,6 +45,8 @@ public class Enemy : MonoBehaviour
 
     public void ThrowAction(Vector3 velocity)
     {
+        if (throwAction == null) return;
+
         throwAction.ThrowAction(this.gameObject, velocity);
         this.EnemyDied?.Invoke();
 
@@ -49,6 +54,8 @@ public class Enemy : MonoBehaviour
 
     public void ConsumeAction(Transform playerTransform)
     {
+        if (consumableAction == null) return;
+        
         consumableAction.ConsumeAction(playerTransform, this.prefabForConsume);
         Destroy(this.gameObject);
         this.EnemyDied?.Invoke();
@@ -56,6 +63,8 @@ public class Enemy : MonoBehaviour
 
     public void GrabAction(float scalingFactor, Transform handTransform, Quaternion handRotation, Vector3 handPosition)
     {
+        if (grabAction == null) return;
+
         grabAction.GrabAction(this.gameObject, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
 
     }
@@ -64,24 +73,38 @@ public class Enemy : MonoBehaviour
     // called by the HandBehavior script whenever this instance of Grabbable is the grabbedObj
     public void GrabbedBehavior(float holderHeight)
     {
-        // rotation animation
-        this.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        // // rotation animation
+        // this.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        //
+        // // floating animation - calculate currentHeightOffset
+        // currentHeightOffset += dir * floatingSpeed * Time.deltaTime;
+        //
+        // // floating animation - add currentHeightOffset
+        // this.transform.position = new Vector3(
+        //     this.transform.position.x,
+        //     transform.position.y + currentHeightOffset,
+        //     this.transform.position.z);
+        //
+        // // floating animation - check change of direction
+        // if ((currentHeightOffset < 0 && dir == -1) ||
+        //     (currentHeightOffset >= maxHeightOffset && dir == 1))
+        // {
+        //     dir *= -1;
+        // }
+        
+        
+        
+        float maxYOffset = 0.08f;
+        float yToIncrease = 0.1f;
+        float angletoAdd = 100f;
 
-        // floating animation - calculate currentHeightOffset
-        currentHeightOffset += dir * floatingSpeed * Time.deltaTime;
+        this.transform.Rotate(Vector3.up, angletoAdd * Time.deltaTime);
 
-        // floating animation - add currentHeightOffset
-        this.transform.position = new Vector3(
-            this.transform.position.x,
-            holderHeight + currentHeightOffset,
-            this.transform.position.z);
+        if (transform.position.y > transform.parent.position.y + maxYOffset) dir = -1;
+        else if (transform.position.y <transform.parent.position.y - maxYOffset) dir = 1;
 
-        // floating animation - check change of direction
-        if ((currentHeightOffset < 0 && dir == -1) ||
-            (currentHeightOffset >= maxHeightOffset && dir == 1))
-        {
-            dir *= -1;
-        }
+        transform.position = new Vector3(transform.position.x,transform.position.y + yToIncrease * dir * Time.deltaTime,transform.position.z);
+        
     }
     
     private void OnCollisionEnter(Collision other)

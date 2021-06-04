@@ -123,14 +123,11 @@ MonoBehaviour:
   jumpForce: 0
   isGrounded: 0
   isRoofed: 0
-  isDoubleJumping: 0
   isMagnetized: 0
+  isDoubleJumping: 0
   isOnHeli: 0
   camera: {fileID: 0}
-  jumpQueued: 0
   jumping: 0
-  gravityForce: 0
-  rotationSpeed: 0
 --- !u!114 &5483567053517166592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +300,8 @@ MonoBehaviour:
   maxChargePitch: 30
   pitchIncreaseRate: 10
   chargeLineRenderer: {fileID: 5483567053536544460}
-  poofSmokePrefab: {fileID: 0}
+  poofSmokePrefab: {fileID: 8514535905209049849, guid: 21bf73890feea374b81e5d4a97ee31f8,
+    type: 3}
 --- !u!65 &5483567054364078941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -341,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5483567054757822765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.5, z: 0.5}
+  m_LocalPosition: {x: 0.72, y: 1.542, z: 0.283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5483567053536544467}

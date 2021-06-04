@@ -222,11 +222,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeGrabbed: 0
-  prefabForConsume: {fileID: 8310822654134248606, guid: 118a69304ecf98a4e9954861dbf56fce,
+  prefabForConsume: {fileID: 1957048272956092714, guid: 118a69304ecf98a4e9954861dbf56fce,
     type: 3}
-  rotationSpeed: 0
-  floatingSpeed: 0
-  maxHeightOffset: 0
+  rotationSpeed: 3
+  floatingSpeed: 0.001
+  maxHeightOffset: 0.05
 --- !u!54 &9006837540207449279
 Rigidbody:
   m_ObjectHideFlags: 0
