@@ -52,8 +52,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/ToonShder/Toon_Shader.shader" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MakingNonInv.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
@@ -63,11 +61,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
@@ -76,6 +72,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Grass/MyGrassShader.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -184,6 +184,7 @@
       <workItem from="1622759537612" duration="3443000" />
       <workItem from="1622765945372" duration="18000" />
       <workItem from="1622766226061" duration="1211000" />
+      <workItem from="1622809843015" duration="2075000" />
     </task>
     <servers />
   </component>

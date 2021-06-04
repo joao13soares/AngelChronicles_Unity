@@ -18,6 +18,9 @@ public class CheckPointTrigger : MonoBehaviour
         {
             healthManager.lastCheckPointPosition = CheckPoint.transform.position;
             checkPointSign.GetComponent<Animation>().Play();
+            
+            
+            Destroy(this.gameObject);
         }
     }
 }

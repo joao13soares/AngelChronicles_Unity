@@ -171,16 +171,23 @@ public class EnemyMovement : MonoBehaviour
         float targetDirectionTolerance = 0.00005f;
         
         // Debug.Log(Mathf.Abs(Vector3.Dot(transform.forward, desiredForward)));
+
+
+        float angleToTurn = 90f;
+        
+        
         
         if (Vector3.Dot(desiredForward, transform.forward) >= 1f- targetDirectionTolerance)
         {
-            Debug.Log("PODE ANDAR");
+            
             currentMovState = EnemyMovState.WALKING;
             return;
         }
 
+        transform.Rotate(transform.up,angleToTurn * Time.deltaTime,Space.Self);
         
-        transform.forward = Vector3.Slerp(transform.forward,desiredForward ,0.05f);
+        
+        // transform.forward = Vector3.Slerp(transform.forward,desiredForward ,0.05f);
     }
 
     private void WalkTowardsTarget()
