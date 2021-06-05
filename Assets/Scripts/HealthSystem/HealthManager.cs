@@ -101,6 +101,7 @@ public class HealthManager : MonoBehaviour
         lives--;
         hitsRemaining = 3;
         
+        
         playerRespawned?.Invoke();
         RemainingLivesChanged?.Invoke();
     }

@@ -36,7 +36,7 @@ public class FeatherCollectible : MonoBehaviour, ICollectible
         player.FeatherCollected();
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         HealthManager playerHealthManagerTemp = other.gameObject.GetComponent<HealthManager>();
 

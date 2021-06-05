@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d088e9bac02a24d97e63ce2afab91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounciness: 12
-  maxBounceTime: 4
+  bounciness: 8
+  maxBounceTime: 6
   poofSmokePrefab: {fileID: 8514535905209049849, guid: 21bf73890feea374b81e5d4a97ee31f8,
     type: 3}
 --- !u!65 &8810058207075314729
