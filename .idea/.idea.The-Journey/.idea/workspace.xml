@@ -25,7 +25,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ConsumableBehaviours/DoubleJumpConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IThrowable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ThrowActions/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IConsumable.cs" />
@@ -76,6 +75,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shader/Water/ToonWater.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -185,6 +185,8 @@
       <workItem from="1622765945372" duration="18000" />
       <workItem from="1622766226061" duration="1211000" />
       <workItem from="1622809843015" duration="2075000" />
+      <workItem from="1622923258881" duration="8000" />
+      <workItem from="1622923277961" duration="29000" />
     </task>
     <servers />
   </component>
