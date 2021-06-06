@@ -7,11 +7,14 @@ public class NormalGrab : IGrabbable
 
     public virtual void GrabAction(GameObject objectToGrab, float scalingFactor, Transform grabbablePlaceHolderTransform, Quaternion handRotation, Vector3 handPosition, out Vector3 defaultScale)
     {
-        
 
+        Animator temp = objectToGrab.GetComponent<Animator>();
+        if (temp != null) temp.enabled = false;
         objectToGrab.GetComponent<Collider>().enabled = false;
         objectToGrab.GetComponent<Enemy>().canBeGrabbed = false;
-        objectToGrab.GetComponent<EnemyMovement>().enabled = false;
+        objectToGrab.GetComponent<EnemyMovement>().enabled = false;      
+
+        
 
         
         Rigidbody rb = objectToGrab.GetComponent<Rigidbody>();

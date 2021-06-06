@@ -211,7 +211,7 @@ MonoBehaviour:
   pointObjPrefab: {fileID: 2393356154814654390, guid: 11e64d1a76ac8764d9e24d39da54bb1b,
     type: 3}
   refreshRate: 0
-  handBehavior: {fileID: 0}
+  handBehavior: {fileID: 5483567054364078940}
 --- !u!1 &5483567053894495352
 GameObject:
   m_ObjectHideFlags: 0

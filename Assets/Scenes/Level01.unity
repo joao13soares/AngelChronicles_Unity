@@ -5680,7 +5680,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440209224}
-  m_LocalRotation: {x: 0.005637249, y: -0.755372, z: 0.00649872, w: 0.6552398}
+  m_LocalRotation: {x: 0.005637249, y: -0.7553719, z: 0.0064987186, w: 0.6552399}
   m_LocalPosition: {x: 93.258606, y: 3.6379035, z: 6.955986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16344,7 +16344,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
@@ -16565,7 +16565,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}

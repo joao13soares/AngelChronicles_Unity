@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Roof
   - Hand
+  - bot
   layers:
   - Default
   - TransparentFX
