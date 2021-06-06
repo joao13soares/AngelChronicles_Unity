@@ -8,27 +8,23 @@ using UnityEngine.Video;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField]private VideoPlayer videoPlayer;
-
-  
-
     
     //Main Menu Animations
     [SerializeField] private VideoClip mainMenuIntroAnimation;
-    [SerializeField] private VideoClip normalMainMenuAnimation;
-    [SerializeField] private VideoClip leaveControlsMenu;
+    [SerializeField] private VideoClip playGameAnimation;
+    
 
+    
     //Main Menu Buttons
     [SerializeField] private GameObject[] mainMenuButtons;
 
     
     //Controls Menu
     [SerializeField] private VideoClip ToControlsMenuAnim;
+    [SerializeField] private VideoClip leaveControlsMenu;
     [SerializeField] private GameObject controlsMenuBackButton;
     
 
-    
-    
-    
     private delegate void nextFuntionToExecute();
     private nextFuntionToExecute functionQueue;
 
@@ -112,13 +108,21 @@ public class MenuManager : MonoBehaviour
 
     public void QuitGame() => Application.Quit();
 
-    public void Play() => SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-    
+    public void Play()
+    {
+
+        DeactivateMainMenuButtons();
+        
+        videoPlayer.clip = playGameAnimation;
+        videoPlayer.Play();
+        
+       functionQueue = () => SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
         
-        Debug.Log(videoPlayer.isPlaying);
         
         if (videoPlayer.isPlaying || functionQueue == null) return;
         

@@ -75,8 +75,8 @@
       <option value="$PROJECT_DIR$/Assets/Shader/Water/ToonWater.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/ActivateMainMenuButto.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -199,7 +199,8 @@
       <workItem from="1622990504991" duration="1000" />
       <workItem from="1622990812583" duration="4193000" />
       <workItem from="1622997088702" duration="824000" />
-      <workItem from="1622998005671" duration="839000" />
+      <workItem from="1622998005671" duration="1062000" />
+      <workItem from="1622999427025" duration="632000" />
     </task>
     <servers />
   </component>

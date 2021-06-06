@@ -15660,14 +15660,13 @@ MonoBehaviour:
   videoPlayer: {fileID: 537540449}
   mainMenuIntroAnimation: {fileID: 32900000, guid: 2ac32722c77f53543beedaf9091832bd,
     type: 3}
-  normalMainMenuAnimation: {fileID: 32900000, guid: ff221cdfbfcff7e43934310011c518a2,
-    type: 3}
-  leaveControlsMenu: {fileID: 32900000, guid: bdd3d4ec49b8fc64e9d2aa5ea1766d08, type: 3}
+  playGameAnimation: {fileID: 32900000, guid: ff221cdfbfcff7e43934310011c518a2, type: 3}
   mainMenuButtons:
   - {fileID: 1486851188}
   - {fileID: 1038483346}
   - {fileID: 465745894}
   ToControlsMenuAnim: {fileID: 32900000, guid: 7019c97072597c34a9d67d63034a7f0d, type: 3}
+  leaveControlsMenu: {fileID: 32900000, guid: bdd3d4ec49b8fc64e9d2aa5ea1766d08, type: 3}
   controlsMenuBackButton: {fileID: 499518804}
 --- !u!1 &1486851188
 GameObject:
