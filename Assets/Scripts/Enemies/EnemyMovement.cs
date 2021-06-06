@@ -210,7 +210,7 @@ public class EnemyMovement : MonoBehaviour
 
         }
 
-        float movForce = 1f;
+        float movForce = 1.5f;
         transform.position += transform.forward * movForce * Time.deltaTime;
     }
     

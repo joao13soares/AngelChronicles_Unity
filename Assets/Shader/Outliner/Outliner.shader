@@ -57,10 +57,6 @@
 				{
 					v2f o;
 
-
-					float3 worldNormal = mul(float4(v.normal, 0), unity_WorldToObject);
-
-
 					o.vertex = UnityObjectToClipPos(v.vertex + _OutlineWidth * v.normal);
 					return o;
 				}
@@ -83,7 +79,7 @@
 				ZWrite On
 
 
-					Pass
+				Pass
 				{
 					CGPROGRAM
 					#pragma vertex vert

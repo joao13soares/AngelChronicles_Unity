@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8A232265-A5C0-495F-966E-C7F7A84A72D6/a1/a0fbb8d3/VideoPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -25,8 +26,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IThrowable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ThrowActions/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringConsume.cs" />
@@ -54,7 +53,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MakingNonInv.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewScene.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewSceneTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
@@ -74,8 +72,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Water/ToonWater.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/ActivateMainMenuButto.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -100,6 +101,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/TESTEBUILD\Projeto Aplicado 2.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Pauloamm\Desktop\TESTEBUILD" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -187,6 +196,10 @@
       <workItem from="1622809843015" duration="2075000" />
       <workItem from="1622923258881" duration="8000" />
       <workItem from="1622923277961" duration="29000" />
+      <workItem from="1622990504991" duration="1000" />
+      <workItem from="1622990812583" duration="4193000" />
+      <workItem from="1622997088702" duration="824000" />
+      <workItem from="1622998005671" duration="839000" />
     </task>
     <servers />
   </component>
