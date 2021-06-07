@@ -42,7 +42,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
@@ -61,7 +60,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/JOAO/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/ToonShder/Toon_Shader.shader" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MakingNonInv.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewScene.cs" />
@@ -81,11 +79,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
@@ -93,6 +89,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sounds/PlayerSound.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Credits/RestartGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -224,6 +224,9 @@
       <workItem from="1623011165989" duration="73000" />
       <workItem from="1623011525995" duration="495000" />
       <workItem from="1623060933672" duration="6118000" />
+      <workItem from="1623075850539" duration="2530000" />
+      <workItem from="1623084204895" duration="1557000" />
+      <workItem from="1623086750912" duration="825000" />
     </task>
     <servers />
   </component>
@@ -232,6 +235,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

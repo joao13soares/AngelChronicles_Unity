@@ -36606,18 +36606,16 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1
-    functionName: PlayRightFootSound
+    functionName: PlayLeftFootSound
     data: 
-    objectReferenceParameter: {fileID: 4672734200168719708, guid: 9d2e3cf034b4c404b9b354b1486aa152,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.9583334
-    functionName: PlayLeftFootSound
+    functionName: PlayRightFootSound
     data: 
-    objectReferenceParameter: {fileID: 4672734200168719708, guid: 9d2e3cf034b4c404b9b354b1486aa152,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

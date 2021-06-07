@@ -19,7 +19,7 @@ public class CollectiblesUI : MonoBehaviour
     {
         maxFeathersText.text ="/" + player.feathersNeededForOneLife;
         currentFeathersText.text = "0";
-        currentLifesText.text = "Lives: x" + player.GetCurrentLives;
+        currentLifesText.text = "X" + player.GetCurrentLives;
 
         player.featherCollected += ChangeCurrentFeathers;
         player.RemainingLivesChanged += ChangeCurrentLives;
@@ -28,6 +28,6 @@ public class CollectiblesUI : MonoBehaviour
 
     void ChangeCurrentFeathers() => currentFeathersText.text = player.GetCurrentFeathers.ToString();
 
-    void ChangeCurrentLives() => currentLifesText.text ="Lives: x" + player.GetCurrentLives;
+    void ChangeCurrentLives() => currentLifesText.text ="X" + player.GetCurrentLives;
     
 }

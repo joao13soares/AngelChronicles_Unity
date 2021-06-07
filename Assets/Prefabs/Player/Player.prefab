@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886f00d4e2ce6dd449bd13ad1788dec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftFootSFX: {fileID: 8300000, guid: 3d593ac9aba3dbf458d017a036f95815, type: 3}
-  rightFootSFX: {fileID: 8300000, guid: 3d593ac9aba3dbf458d017a036f95815, type: 3}
+  leftFootSFX: {fileID: 8300000, guid: 23dc7f1947743e34a8a65f5971d3acfd, type: 3}
+  rightFootSFX: {fileID: 8300000, guid: b3df606163e74ce47aa6133ddcc275f2, type: 3}
 --- !u!1 &4672734200168719708
 GameObject:
   m_ObjectHideFlags: 0

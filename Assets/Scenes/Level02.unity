@@ -7687,7 +7687,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 5117010441948690849, guid: 497a30ab18ea4164dbfeaf57ac87509c,
+      objectReference: {fileID: 7005847301873515369, guid: 2e1431768f922d5488a6b4be1cf05023,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
@@ -33136,6 +33136,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1047353282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4672734198845097574, guid: 9d2e3cf034b4c404b9b354b1486aa152,
+    type: 3}
+  m_PrefabInstance: {fileID: 1247246078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1047353286
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047353282}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1048513866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39206,6 +39308,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2090058029304352522, guid: 9d2e3cf034b4c404b9b354b1486aa152,
+        type: 3}
+      propertyPath: leftFootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 8856f97ff72bf0b4fa1e0d4046f66fc7, type: 3}
+    - target: {fileID: 2090058029304352522, guid: 9d2e3cf034b4c404b9b354b1486aa152,
+        type: 3}
+      propertyPath: rightFootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4895e3e75526b3644b8dac2baced0276, type: 3}
     - target: {fileID: 4672734198845097574, guid: 9d2e3cf034b4c404b9b354b1486aa152,
         type: 3}
       propertyPath: m_TagString
@@ -47742,7 +47854,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 5117010441948690849, guid: 497a30ab18ea4164dbfeaf57ac87509c,
+      objectReference: {fileID: 7005847301873515369, guid: 2e1431768f922d5488a6b4be1cf05023,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}

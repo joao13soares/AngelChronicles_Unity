@@ -116,8 +116,9 @@ public class HandBehavior : MonoBehaviour
                 grabbedObj.GetComponent<Enemy>().ConsumeAction(playerTransform);
                 
                  Instantiate(poofSmokePrefab, playerTransform.GetComponentInChildren<SkinnedMeshRenderer>().bounds.center, Quaternion.identity, null);
-                // GameObject specialMechanincObj = Instantiate(grabbedObj.GetComponent<GrabbableEnemy>().specialMechanicObjPrefab, playerTransform.position, playerTransform.rotation, playerTransform);
-                // GameObject.DestroyImmediate(grabbedObj.gameObject);
+                 grabbedObj = null;
+                 // GameObject specialMechanincObj = Instantiate(grabbedObj.GetComponent<GrabbableEnemy>().specialMechanicObjPrefab, playerTransform.position, playerTransform.rotation, playerTransform);
+                 // GameObject.DestroyImmediate(grabbedObj.gameObject);
             }
         }
     }
