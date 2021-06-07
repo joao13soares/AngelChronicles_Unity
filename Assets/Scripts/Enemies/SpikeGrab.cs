@@ -13,7 +13,7 @@ public class SpikeGrab : NormalGrab
 
         defaultScale = Vector3.one; // out needs to be assigned so this is here to make compiling possible
 
-        Debug.Log("NAO AGARRA CARAHO" + objectToGrab);
+        
 
         
         if (objectToGrab.GetComponent<FieldOfViewDetection>().isPlayerDetected)
@@ -24,7 +24,7 @@ public class SpikeGrab : NormalGrab
 
         }
 
-        Debug.Log(" AGARRA PFF");
+        
 
             base.GrabAction(objectToGrab, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
         

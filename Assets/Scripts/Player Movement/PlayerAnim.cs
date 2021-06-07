@@ -33,6 +33,9 @@ public class PlayerAnim : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] HandBehavior handBehavior;
 
+
+
+
     void Update()
     {
         //---------------------------------------------------------------
@@ -42,6 +45,8 @@ public class PlayerAnim : MonoBehaviour
         bool playerIsUsingEnemyMechanic = this.transform.childCount > 4;
         bool playerIsOnHeli = playerMovement.isOnHeli;
         bool playerIsDoubleJumping = playerMovement.isDoubleJumping;
+        bool playerIsGrounded = playerMovement.isGrounded;
+        bool playerIsRoofed = playerMovement.isRoofed;
 
         if (playerIsUsingEnemyMechanic)
         {
@@ -66,12 +71,12 @@ public class PlayerAnim : MonoBehaviour
                 }
             }
         }
-        else if ((playerVelY > Mathf.Pow(10, -4) && !playerIsMagnetized) || (playerVelY < -Mathf.Pow(10, -4) && playerIsMagnetized))
+        else if ((playerVelY > Mathf.Pow(10, -4) && !playerIsMagnetized && !playerIsGrounded) || (playerVelY < -Mathf.Pow(10, -4) && playerIsMagnetized && !playerIsRoofed))
         {
             bodyAnimState = AnimState.Jumping;
             handAnimState = AnimState.Jumping;
         }
-        else if ((playerVelY < -Mathf.Pow(10, -4) && !playerIsMagnetized) || (playerVelY > Mathf.Pow(10, -4) && playerIsMagnetized))
+        else if ((playerVelY < -Mathf.Pow(10, -4) && !playerIsMagnetized && !playerIsGrounded) || (playerVelY > Mathf.Pow(10, -4) && playerIsMagnetized && !playerIsRoofed))
         {
             bodyAnimState = AnimState.Falling;
             handAnimState = AnimState.Falling;
@@ -132,4 +137,7 @@ public class PlayerAnim : MonoBehaviour
         bodyAnimator.SetInteger("animState", (int)bodyAnimState);
         handAnimator.SetInteger("animState", (int)handAnimState);
     }
+
+
+   
 }

@@ -18,7 +18,7 @@ public class HelicopterMechanic : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
 
         //this.transform.localPosition += player.transform.lossyScale.y * 1.25f * player.transform.up;
         player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionY;

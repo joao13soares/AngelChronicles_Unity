@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class FeatherCollectible : MonoBehaviour, ICollectible
 {
+    
 
     private float defaultY;
     private float direction;
@@ -34,6 +35,7 @@ public class FeatherCollectible : MonoBehaviour, ICollectible
     public void CollectedAction(HealthManager player)
     {
         player.FeatherCollected();
+        
     }
 
     void OnTriggerEnter(Collider other)

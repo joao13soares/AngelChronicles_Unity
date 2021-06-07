@@ -12,4 +12,7 @@ public class SpringEnemy : Enemy
       throwAction = new NormalThrow();
       
    }
+
+
+   void PlayBoingSoundEffect() => this.GetComponent<AudioSource>().Play();
 }

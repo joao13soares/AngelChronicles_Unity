@@ -8,7 +8,7 @@ public class MagnetConsumable : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
         
         
          // player.GetComponent<PlayerMovement>().ChangeGravityDirection();

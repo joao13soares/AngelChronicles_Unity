@@ -10,7 +10,6 @@ public class PlayerContact : MonoBehaviour
 
       
       
-      Debug.Log(other.gameObject);
       if (playerHp != null)
          DamagePlayer(playerHp);
       

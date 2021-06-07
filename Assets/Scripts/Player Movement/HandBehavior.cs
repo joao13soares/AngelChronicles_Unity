@@ -171,9 +171,7 @@ public class HandBehavior : MonoBehaviour
              
              if (grabbablePlaceHolder.childCount > 1)
              {
-                 
-                 
-                 Debug.Log(transform.GetChild(1).gameObject);
+
                  grabbedObj = grabbablePlaceHolder.GetChild(1).GetComponent<Enemy>();
              }
 

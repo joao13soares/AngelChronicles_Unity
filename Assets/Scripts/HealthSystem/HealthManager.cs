@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class HealthManager : MonoBehaviour
 {
 
+    [SerializeField] private AudioClip collectSFX;
+    
     [SerializeField] GameObject levelStartPostion;
     public Vector3 lastCheckPointPosition;
 
@@ -19,16 +21,16 @@ public class HealthManager : MonoBehaviour
     public float GetCurrentFeathers => currentFeathers;
 
     
+    
+    // Invincibility Variables
     private bool playerInvincible;
     [SerializeField] private List<Renderer> renderersToFlash;
     [SerializeField] private const float invincibilityFramesTime = 1.5f;
 
-    
+    // EVENTS
     public delegate void PlayerEvent();
-
     public event PlayerEvent playerHit;
     public event PlayerEvent playerRespawned;
-
     public event PlayerEvent featherCollected, RemainingLivesChanged;
     
     
@@ -68,13 +70,7 @@ public class HealthManager : MonoBehaviour
 
     IEnumerator InvincibilityFrames()
     {
-        //
-        // Renderer temp = this.GetComponent<Renderer>();
-
         playerInvincible = true;
-        // temp.enabled = false;
-        //
-        // Vector3 defaultScale = transform.localScale;
         
         for (float i = 0; i <= invincibilityFramesTime; i += invincibilityFramesTime / 10f)
         {
@@ -116,6 +112,9 @@ public class HealthManager : MonoBehaviour
 
     public void FeatherCollected()
     {
+        
+        this.GetComponent<AudioSource>().PlayOneShot(collectSFX);
+        
         currentFeathers++;
         featherCollected?.Invoke();
 

@@ -13,9 +13,11 @@ public class DoubleJumpMechanic : MonoBehaviour
 
     [SerializeField] private GameObject poofSmokePrefab;
 
+    [SerializeField] private AudioClip boingSFX;
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
 
         player.GetComponent<PlayerMovement>().isDoubleJumping = true;
         player.GetComponent<PlayerAnim>().jumpConsumableAnimator = this.GetComponent<Animator>();
@@ -26,6 +28,11 @@ public class DoubleJumpMechanic : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().Jump(bounciness);
         }
+
+        // UpAnimClip.events[0]. += () => this.GetComponent<AudioSource>().Play();
+
+
+
     }
 
     void Update()
@@ -45,4 +52,10 @@ public class DoubleJumpMechanic : MonoBehaviour
             currentBounceTime += Time.deltaTime;
         }
     }
+
+    void NEWFUNC()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(boingSFX);
+    }
+
 }

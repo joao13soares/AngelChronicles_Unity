@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float movementForce;
     [SerializeField] float jumpForce;
     Rigidbody playerRb;
-    [SerializeField] bool isGrounded, isRoofed;
+    [SerializeField] public bool isGrounded, isRoofed;
     public bool isMagnetized;
     public bool isDoubleJumping;
     public bool isOnHeli;
@@ -154,4 +154,8 @@ public class PlayerMovement : MonoBehaviour
             isRoofed = false;
         }
     }
+    
+    
+    
+   
 }

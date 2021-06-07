@@ -6469,7 +6469,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
@@ -8059,7 +8059,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
@@ -24991,7 +24991,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
@@ -48107,7 +48107,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawnPrefab
       value: 
-      objectReference: {fileID: 3604147946279771391, guid: 6139b4db31451f04d8603b8981be99b1,
+      objectReference: {fileID: 5204588021896928594, guid: e4a742c5104270c4f85364e436abdbac,
         type: 3}
     - target: {fileID: 8279437697028294880, guid: 61c6ca34905d2d54cb347bdd94ed0956,
         type: 3}
