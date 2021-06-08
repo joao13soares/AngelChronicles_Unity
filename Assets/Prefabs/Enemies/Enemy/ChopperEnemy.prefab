@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc21f6c16d71754408bb1307a313c483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDestroy: 2
   canBeGrabbed: 0
   prefabForConsume: {fileID: 1855272007394109500, guid: 2933fc6cca851534ab9a990c5b0ecc6a,
     type: 3}

@@ -66,9 +66,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewSceneTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Grass/MyGrassShader.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/FieldOfViewDetection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
@@ -93,6 +91,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Credits/RestartGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -227,6 +227,7 @@
       <workItem from="1623075850539" duration="2530000" />
       <workItem from="1623084204895" duration="1557000" />
       <workItem from="1623086750912" duration="825000" />
+      <workItem from="1623178958152" duration="2373000" />
     </task>
     <servers />
   </component>

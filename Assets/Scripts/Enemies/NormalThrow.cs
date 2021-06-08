@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class NormalThrow : IThrowable
 {
+    private float timeToDestroy = 2f;
     public virtual void  ThrowAction(GameObject objectToThrow, Vector3 velocity)
     {
         objectToThrow.transform.parent = null;
         objectToThrow.transform.rotation = Quaternion.identity;
 
-       GameObject.DestroyImmediate(objectToThrow.GetComponent<PlayerContact>());
+         GameObject.DestroyImmediate(objectToThrow.GetComponent<PlayerContact>());
         
          Rigidbody rb = objectToThrow.GetComponent<Rigidbody>();
          Collider collider  = objectToThrow.GetComponent<Collider>();
@@ -22,7 +23,12 @@ public class NormalThrow : IThrowable
 
         collider.enabled = true;
 
-        //StartCoroutine(Rescale(0.05f, defaultScale)); // rescale after some instant
+        objectToThrow.GetComponent<Enemy>().ActivateDestroyWithDelay();
+
+      
 
     }
+
+    
+    
 }

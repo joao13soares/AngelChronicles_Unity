@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    [SerializeField]private float timeToDestroy ;
     public bool canBeGrabbed;
     Vector3 defaultScale;
 
@@ -119,7 +120,17 @@ public class Enemy : MonoBehaviour
 
         
     }
-    
-    
+
+    public void ActivateDestroyWithDelay()
+    {
+         StartCoroutine(DestroyThrowEnemieAfterDelay());
+    }
+    IEnumerator DestroyThrowEnemieAfterDelay()
+    {
+        if (timeToDestroy == 0f) yield break ;
+        
+        yield return new WaitForSeconds(timeToDestroy);
+        GameObject.Destroy(this.gameObject);
+    }
     
 }
