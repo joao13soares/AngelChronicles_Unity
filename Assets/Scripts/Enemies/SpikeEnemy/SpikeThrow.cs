@@ -8,6 +8,5 @@ public class SpikeThrow : NormalThrow
     {
         base.ThrowAction(objectToThrow,velocity);
         objectToThrow.AddComponent<SpikeCreation>();
-
     }
 }

@@ -3,7 +3,9 @@ guid: eb1828ecaecceb244b01d5e3fc631056
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spikesPrefab: {fileID: 919132149155446097, guid: c7225aa7a7b4c864ca13124fda235150,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

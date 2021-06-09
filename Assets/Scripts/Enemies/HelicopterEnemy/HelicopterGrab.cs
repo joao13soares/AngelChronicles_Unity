@@ -13,14 +13,13 @@ public class HelicopterGrab : NormalGrab
        
         if (objectToGrab.GetComponent<ShockingTimer>().doesDamageToPlayer)
         {
-            objectToGrab.GetComponent<PlayerContact>().DamagePlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>());
+            objectToGrab.GetComponent<PlayerContact>().DamagePlayer(GameObject.Find("Player").GetComponent<HealthManager>());
 
         }
 
         
         else 
             base.GrabAction(objectToGrab, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
-        
         
     }
 }

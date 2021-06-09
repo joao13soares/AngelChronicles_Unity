@@ -44,13 +44,12 @@ public class FieldOfViewDetection : MonoBehaviour
         Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
 
 
-
         if (Physics.Raycast(enemyTransform.position, toPlayer, out hit, detectRange, ~enemyLayer))
         {
-            // Debug.Log(hit.collider.gameObject.name);
-            
-            
-            
+            Debug.Log(hit.collider.gameObject.name);
+
+
+
             if (hit.collider.gameObject.transform == playerTransform)
             {
                 return true;
@@ -59,34 +58,34 @@ public class FieldOfViewDetection : MonoBehaviour
 
         return false;
     }
-    
-    // private void OnDrawGizmos()
-    // {
-    //     
-    //     Gizmos.color = Color.cyan;
-    //     Gizmos.DrawWireSphere(enemyTransform.position, detectRange);
-    //
-    //     Vector3 fovLine1 = Quaternion.AngleAxis(-fovAngle / 2, Vector3.up) * enemyTransform.forward * detectRange;
-    //     Vector3 fovLine2 = Quaternion.AngleAxis(fovAngle / 2, Vector3.up) * enemyTransform.forward * detectRange;
-    //
-    //
-    //     Gizmos.color = Color.yellow;
-    //
-    //     Gizmos.DrawRay(enemyTransform.position, fovLine1);
-    //     Gizmos.DrawRay(enemyTransform.position, fovLine2);
-    //
-    //     Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
-    //     toPlayer = Vector3.ClampMagnitude(toPlayer, detectRange);
-    //
-    //     
-    //     
-    //
-    //     if (isPlayerDetected)
-    //         Gizmos.color = Color.green;
-    //
-    //     else Gizmos.color = Color.red;
-    //
-    //     Gizmos.DrawRay(enemyTransform.position, toPlayer);
-    // }
+
+    //private void OnDrawGizmos()
+    //{
+
+    //    Gizmos.color = Color.cyan;
+    //    Gizmos.DrawWireSphere(enemyTransform.position, detectRange);
+
+    //    Vector3 fovLine1 = Quaternion.AngleAxis(-fovAngle / 2, Vector3.up) * enemyTransform.forward * detectRange;
+    //    Vector3 fovLine2 = Quaternion.AngleAxis(fovAngle / 2, Vector3.up) * enemyTransform.forward * detectRange;
+
+
+    //    Gizmos.color = Color.yellow;
+
+    //    Gizmos.DrawRay(enemyTransform.position, fovLine1);
+    //    Gizmos.DrawRay(enemyTransform.position, fovLine2);
+
+    //    Vector3 toPlayer = playerPositionCorrectedTransform.position - enemyTransform.position;
+    //    toPlayer = Vector3.ClampMagnitude(toPlayer, detectRange);
+
+
+
+
+    //    if (isPlayerDetected)
+    //        Gizmos.color = Color.green;
+
+    //    else Gizmos.color = Color.red;
+
+    //    Gizmos.DrawRay(enemyTransform.position, toPlayer);
+    //}
 
 }

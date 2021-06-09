@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpikeEnemy : Enemy
 {
-   
+    [SerializeField]
+    public GameObject spikePrefab;
     void Awake()
     {
         canBeGrabbed = true;
