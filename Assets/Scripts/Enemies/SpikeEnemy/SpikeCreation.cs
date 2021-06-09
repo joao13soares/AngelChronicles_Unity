@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class SpikeCreation : MonoBehaviour
 {
-
-    
+    private Quaternion playerQuart;
 
     private void Awake()
     {
         this.enabled = false;
+        playerQuart = GameObject.Find("Player").transform.rotation;
     }
 
     void OnCollisionEnter(Collision other)
@@ -18,7 +18,7 @@ public class SpikeCreation : MonoBehaviour
 
         if(other.gameObject.CompareTag("Wall"))
         {
-            GameObject spikes = Instantiate(this.GetComponent<SpikeEnemy>().spikePrefab, this.transform.position,GameObject.Find("Player").transform.rotation,null);
+            GameObject spikes = Instantiate(this.GetComponent<SpikeEnemy>().spikePrefab, this.transform.position,playerQuart,null);
             GameObject.Destroy(this.gameObject);
         }
 

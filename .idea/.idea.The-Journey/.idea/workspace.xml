@@ -46,7 +46,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner.shader" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeCreation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" />
@@ -93,6 +92,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeCreation.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -228,6 +228,7 @@
       <workItem from="1623084204895" duration="1557000" />
       <workItem from="1623086750912" duration="825000" />
       <workItem from="1623178958152" duration="2373000" />
+      <workItem from="1623264440766" duration="159000" />
     </task>
     <servers />
   </component>
