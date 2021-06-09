@@ -21,8 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8979269963596733007, guid: e68460b392c8f734d8203bb7294a8a3b,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 1de5c02181d660f4e8ef3a0be89815fc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -99,8 +98,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7118053101115055034, guid: e68460b392c8f734d8203bb7294a8a3b,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: d5f10103f4bbdde479cde8889f415f07, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -137,7 +135,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpikyEnemySpikesCTRL
+  m_Name: SpikyEnemySpikesCtrl
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: animState
