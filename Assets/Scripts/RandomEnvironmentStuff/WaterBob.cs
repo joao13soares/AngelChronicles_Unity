@@ -32,6 +32,8 @@ public class WaterBob : MonoBehaviour
     {
         transform.position = initialPosition - Vector3.up * Mathf.Sin((Time.time + offset) * period) * height;
 
+        if (rotation == 0f && rotationP == 0f) return;
+
         float eulerX = InitialRotation.x - Vector3.right.x * Mathf.Sin((Time.time + offset) * rotationP) * rotation;
         float eulerZ = InitialRotation.x - Vector3.forward.z * Mathf.Sin((Time.time + offset2) * rotationP) * rotation;
 

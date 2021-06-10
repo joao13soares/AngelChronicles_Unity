@@ -54,6 +54,10 @@ public class CannonBall : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Player"))
+        GameObject.Find("Player").GetComponent<HealthManager>().GetHit();
+        
+        
         Destroy();
     }
 

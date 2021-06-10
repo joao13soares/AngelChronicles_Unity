@@ -9,6 +9,8 @@ public class CheckPointTrigger : MonoBehaviour
     [SerializeField]
     GameObject CheckPoint;
 
+    [SerializeField] private AudioClip checkpointSFX;
+    
     [SerializeField]
     HealthManager healthManager;
 
@@ -18,9 +20,18 @@ public class CheckPointTrigger : MonoBehaviour
         {
             healthManager.lastCheckPointPosition = CheckPoint.transform.position;
             checkPointSign.GetComponent<Animation>().Play();
-            
-            
-            Destroy(this.gameObject);
+
+            StartCoroutine(WaitForBling());
+
         }
+    }
+
+
+    IEnumerator WaitForBling()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(checkpointSFX);
+        yield return new WaitForSeconds(checkpointSFX.length);
+        Destroy(this.gameObject);
+
     }
 }

@@ -22,6 +22,19 @@ public class CannonEnemy : MonoBehaviour
 
     // [SerializeField] GameObject targetPredictObj;
 
+
+    [SerializeField] private AudioClip shotSFX;
+    
+    [SerializeField] private Animator turretAnimator;
+    [SerializeField] private Animator wheelsAnimator;
+
+    private enum CannnonState
+    {
+        Idle,
+        TurningLeft,
+        TurningRight
+    }
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -55,6 +68,8 @@ public class CannonEnemy : MonoBehaviour
             }
         }
 
+        
+        // If enemy detected, chase his direction
         if (detected)
         {
             Debug.DrawRay(this.transform.position, player.transform.position - this.transform.position, Color.red);
@@ -65,12 +80,22 @@ public class CannonEnemy : MonoBehaviour
 
             Vector3 shootingVelocityVec = CalcVelocityVector(targetPosPredict);
 
+            
             this.transform.forward = Vector3.Lerp(this.transform.forward, shootingVelocityVec, Time.deltaTime * chasingVelocity);
             //this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(shootingVelocityVec), Time.deltaTime * chasingVelocity);
             //this.transform.rotation = Quaternion.LookRotation(shootingVelocityVec);
 
+            float angleToPlayer = Vector3.SignedAngle(this.transform.forward, shootingVelocityVec, this.transform.up);
+            
+            if(angleToPlayer >0) wheelsAnimator.SetInteger("AnimState",(int)CannnonState.TurningLeft);
+            else if(angleToPlayer < 0) wheelsAnimator.SetInteger("AnimState",(int)CannnonState.TurningRight);
+            else wheelsAnimator.SetInteger("AnimState",(int)CannnonState.Idle);
+
+
             if (timeForNextShoot <= 0)
             {
+                turretAnimator.SetTrigger("Shot");
+                this.GetComponent<AudioSource>().PlayOneShot(shotSFX);
                 
                 cannonBall = Instantiate(cannonBallPrefab, cannonBallExitPoint.position, cannonBallExitPoint.rotation, null);
                 cannonBall.GetComponent<CannonBall>().GetPrediction(targetPosPredict + Vector3.up * 0.1f);
@@ -83,13 +108,10 @@ public class CannonEnemy : MonoBehaviour
                 timeForNextShoot -= Time.deltaTime;
             }
         }
+        // return to default Position
         else
         {
-            //this.transform.GetChild(0).GetComponent<Renderer>().material.color = this.GetComponent<Renderer>().material.color;
-            // targetPredictObj.SetActive(false);
-
-            this.transform.forward = Vector3.Lerp(this.transform.forward, defaultForward, Time.deltaTime);
-
+           this.transform.forward = Vector3.Lerp(this.transform.forward, defaultForward, Time.deltaTime);
             timeForNextShoot = 0.5f;
         }
     }
