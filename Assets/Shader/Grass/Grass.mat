@@ -108,18 +108,18 @@ Material:
     - _GrassHeight: 1.5
     - _GrassWidth: 0.281
     - _Gravity: 0
-    - _Height: 7
+    - _Height: 5.62
     - _HeightCutoff: 6.41
     - _HeightFactor: 9.46
     - _Length: 7.82
     - _LengthIntensity: 0
     - _Steps: 100
-    - _Thickness: 0.8
+    - _Thickness: 0.62
     - _TranslucentGain: 0.5
     - _UVSec: 0
     - _WaveAmp: 12.1
     - _WaveSpeed: 9.34
-    - _Widht: 0.26
+    - _Widht: 0.42
     - _Width: 4.33
     - _WindFrequency: 1.29
     - _WindMax: 0.88
