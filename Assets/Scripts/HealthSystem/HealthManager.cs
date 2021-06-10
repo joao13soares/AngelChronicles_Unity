@@ -13,11 +13,11 @@ public class HealthManager : MonoBehaviour
 
     public float feathersNeededForOneLife = 3;
 
-    float lives, hitsRemaining;
-
+    private float hitsRemaining;
+    private float lives;
     public float GetCurrentLives => lives;
     
-    [SerializeField] float currentFeathers;
+    float currentFeathers;
     public float GetCurrentFeathers => currentFeathers;
 
     
@@ -25,7 +25,7 @@ public class HealthManager : MonoBehaviour
     // Invincibility Variables
     private bool playerInvincible;
     [SerializeField] private List<Renderer> renderersToFlash;
-    [SerializeField] private const float invincibilityFramesTime = 1.5f;
+     private const float invincibilityFramesTime = 1.5f;
 
     // EVENTS
     public delegate void PlayerEvent();
@@ -43,7 +43,6 @@ public class HealthManager : MonoBehaviour
         playerInvincible = false;
     }
 
-    public void ChangeLastCheckpoint(Vector3 newCheckpointPos) => lastCheckPointPosition = newCheckpointPos;
 
     public void GetHit()
     {
@@ -72,6 +71,7 @@ public class HealthManager : MonoBehaviour
     {
         playerInvincible = true;
         
+        // Blinking effect
         for (float i = 0; i <= invincibilityFramesTime; i += invincibilityFramesTime / 10f)
         {
             foreach (Renderer r in renderersToFlash) r.enabled = false;
@@ -104,7 +104,7 @@ public class HealthManager : MonoBehaviour
 
     private void Restart()
     {
-        // RestartLevel Logic
+        
         SpawnPlayerAtPosition(levelStartPostion.transform.position);
         lives = 1;
     }

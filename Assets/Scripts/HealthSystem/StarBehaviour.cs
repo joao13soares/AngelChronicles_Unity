@@ -18,22 +18,21 @@ public class StarBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        // Sets up colors
         currentColorIndex = 0;
         colorsForLife[0] = Color.yellow;
         colorsForLife[1] = new Vector4(1f, 0.5f, 0f, 0f);
         colorsForLife[2] = Color.red;
 
+        // Subscribe to needed events
         playerHealth.playerRespawned += ChangeColor;
-        
         playerHealth.playerHit += ChangeColor;
+        
+        
         StartCoroutine(OffSetVariation());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-         this.transform.position = Vector3.Lerp(transform.position, starPlaceHolder.position + offSet, movementForce);
-    }
 
     IEnumerator OffSetVariation()
     {
@@ -44,12 +43,16 @@ public class StarBehaviour : MonoBehaviour
         
         while (true)
         {
+            // Up and Down
             if (offSet.y >= startLimit) direction = -1;
-
             if (offSet.y <= -startLimit) direction = 1;
 
             offSet += Vector3.up * Time.deltaTime * direction * speed;
             
+            
+            // Follow target position
+            this.transform.position = Vector3.Lerp(transform.position, starPlaceHolder.position + offSet, movementForce);
+
 
             yield return null;
         }
@@ -60,9 +63,7 @@ public class StarBehaviour : MonoBehaviour
 
     void ChangeColor()
     {
-
-        
-        switch (currentColorIndex)
+       switch (currentColorIndex)
         {
             
             case 2:
@@ -75,7 +76,6 @@ public class StarBehaviour : MonoBehaviour
                 
         }
         this.GetComponent<Renderer>().material.color = colorsForLife[currentColorIndex];
-        // this.GetComponent<Renderer>().material.SetVector("_OutlineColor", colorsForLife[currentColorIndex]);
     }
     
     

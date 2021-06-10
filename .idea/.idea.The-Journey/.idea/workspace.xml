@@ -42,16 +42,13 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/SpawnPrefabConsume.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeThrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/SimpleOffsetCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/ViewPlayerBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeEnemy/SpikeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/DamageGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/StarBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/HelicopterEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ChargeLine/ChargeLineRenderer.cs" />
@@ -61,7 +58,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/LightHouseFade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewScene.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoading/LoadNewSceneTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/HelicopterEnemy/ShockingTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Grass/MyGrassShader.shader" />
@@ -71,18 +67,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/ActivateMainMenuButto.cs" />
       <option value="$PROJECT_DIR$/Assets/Shader/Outliner/Outliner.shader" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/HelicopterHat/HelicopterMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Prefabs/DoubleJumpHat/DoubleJumpMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpringEnemy/SpringEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sounds/PlayerSound.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InGameUI/CollectiblesUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Credits/RestartGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MagnetEnemy/MagnetConsumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player Movement/HandBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/NormalThrow.cs" />
@@ -91,8 +82,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RandomEnvironmentStuff/WaterBob.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CannonEnemy/CannonBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/FeatherCollectible.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/HaloCollectible.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collectibles/Collectible.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Credits/RestartGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SpikeGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/PlayerContact.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hazards/IncreaseGravity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/StarBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/CheckPointTrigger.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rD0BhGZ0eQ9WgIsrPycrnwuBAt" />
@@ -230,6 +230,9 @@
       <workItem from="1623178958152" duration="2373000" />
       <workItem from="1623264440766" duration="159000" />
       <workItem from="1623275868214" duration="6153000" />
+      <workItem from="1623329370863" duration="263000" />
+      <workItem from="1623329663566" duration="632000" />
+      <workItem from="1623330333170" duration="1240000" />
     </task>
     <servers />
   </component>

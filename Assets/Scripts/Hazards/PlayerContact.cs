@@ -7,8 +7,6 @@ public class PlayerContact : MonoBehaviour
    void OnCollisionStay(Collision other)
    {
       HealthManager playerHp = other.gameObject.GetComponent<HealthManager>();
-
-      
       
       if (playerHp != null)
          DamagePlayer(playerHp);

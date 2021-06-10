@@ -18,14 +18,12 @@ public class SpikeGrab : NormalGrab
         
         if (objectToGrab.GetComponent<FieldOfViewDetection>().isPlayerDetected)
         {
-            
+            //Deals damage
             objectToGrab.GetComponent<PlayerContact>().DamagePlayer(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>());
             return;
 
         }
-
-        
-
+      
             base.GrabAction(objectToGrab, scalingFactor, handTransform, handRotation, handPosition, out defaultScale);
         
         

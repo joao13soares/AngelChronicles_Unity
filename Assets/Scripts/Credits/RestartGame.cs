@@ -8,19 +8,19 @@ using UnityEngine.Video;
 public class RestartGame : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         videoPlayer = this.GetComponent<VideoPlayer>();
     }
 
-    private void ReloadFirstScene()
-    {
-        SceneManager.LoadSceneAsync(0);
-    }
+    private void ReloadFirstScene() => SceneManager.LoadSceneAsync(0);
+        
+    
 
     private void Update()
     {
+        // Waits for credits video to end
         if (videoPlayer.isPlaying) return;
         
         ReloadFirstScene();

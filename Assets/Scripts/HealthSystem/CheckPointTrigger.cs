@@ -5,34 +5,29 @@ using UnityEngine;
 public class CheckPointTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject checkPointSign;
-    
-    [SerializeField]
-    GameObject CheckPoint;
+
+    [SerializeField] GameObject CheckPoint;
 
     [SerializeField] private AudioClip checkpointSFX;
-    
-    [SerializeField]
-    HealthManager healthManager;
+
+    [SerializeField] HealthManager healthManager;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            healthManager.lastCheckPointPosition = CheckPoint.transform.position;
-            checkPointSign.GetComponent<Animation>().Play();
+        if (!other.CompareTag("Player")) return;
 
-            StartCoroutine(WaitForBling());
+        
+        healthManager.lastCheckPointPosition = CheckPoint.transform.position;
+        checkPointSign.GetComponent<Animation>().Play();
 
-        }
+        StartCoroutine(WaitForBlingSound());
     }
 
 
-    IEnumerator WaitForBling()
+    IEnumerator WaitForBlingSound()
     {
-        
         this.GetComponent<AudioSource>().PlayOneShot(checkpointSFX);
         yield return new WaitForSeconds(checkpointSFX.length);
         Destroy(this.gameObject);
-
     }
 }

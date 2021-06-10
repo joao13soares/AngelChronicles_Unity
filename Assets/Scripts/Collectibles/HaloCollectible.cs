@@ -27,6 +27,10 @@ public class HaloCollectible : MonoBehaviour, ICollectible
 
         transform.position = new Vector3(transform.position.x,transform.position.y + yToIncrease * direction * Time.deltaTime,transform.position.z);
     }
+    
+    
+    
+    
 
     public void CollectedAction(HealthManager player)
     {
