@@ -66,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
 
         float targetDirectionTolerance = 0.001f;
         
-         Debug.Log(Mathf.Abs(Vector3.Dot(transform.forward, desiredForward)));
+
 
 
         float angleToTurn = 90f;

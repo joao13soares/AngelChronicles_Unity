@@ -29,6 +29,7 @@ public class CheckPointTrigger : MonoBehaviour
 
     IEnumerator WaitForBling()
     {
+        
         this.GetComponent<AudioSource>().PlayOneShot(checkpointSFX);
         yield return new WaitForSeconds(checkpointSFX.length);
         Destroy(this.gameObject);
