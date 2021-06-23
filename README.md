@@ -12,3 +12,5 @@ This was a university group project made by:
 - Luís Silva https://github.com/oceanncs
 - Paulo Macedo https://github.com/Pauloamm
 - Fábio Silva https://github.com/fabiodanil2
+
+itch.io: https://fabiodanil.itch.io/angel-chronicles-school-project
